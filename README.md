@@ -11,7 +11,8 @@ This repository will hold modeling artifacts and documentation for a data model 
 - Lisa O'Keefe (LO)
 . . .
 
-## Components
+## Components 
+The following components will be developed as part of this effort.  
 
 ### 1. A high level information model
 **Purpose:** informally define the model in format/language agnostic, and human-friendly way.  
