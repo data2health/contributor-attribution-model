@@ -16,11 +16,11 @@
           label: "Haendel, Holmes, White, et al. 2015"
           description: "A paper about some stuff we did with mice"
           dateCreated: "2015-01-14"
-      realized: credit:0000013  # writing original draft role
+      hadRole: credit:0000013  # writing original draft role
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
       wasSpecifiedBy: "JBMS author guidelines, v1.2"
-      performedFor: "NCATS Translator Consortium"
+      wasPerformedFor: "NCATS Translator Consortium"
 
     - id: ex:contribution002
       type: cro:Contribution  
@@ -31,10 +31,10 @@
           label: "Haendel, Holmes, White, et al. 2015"
           description: "A paper about some stuff we did with mice"
           dateCreated: "2015-01-14"
-      realized: credit:0000012  # visualization role
+      hadRole: credit:0000012  # visualization role
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
-      performedFor: "NCATS Translator Consortium"
+      wasPerformedFor: "NCATS Translator Consortium"
       
     - id: ex:contribution010
       type: cro:Contribution  
@@ -44,7 +44,7 @@
           type: cro:dataset # a subtype of Entity
           label: "shh phenotype dataset 2"
           dateCreated: "2014-04-01"
-      realized: credit:0000005  # investigation role
+      hadRole: credit:0000005  # investigation role
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -55,7 +55,7 @@
         - id: ex:dataset3
           type: cro:dataset # a subtype of Entity
           label: "shh phenotype dataset 2"
-      realized: credit:0000002  # curation role
+      hadRole: credit:0000002  # curation role
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -66,7 +66,7 @@
         - id: ex:dataset3
           type: cro:dataset # a subtype of Entity
           label: "shh phenotype dataset 2"
-      realized: credit:0000003  # formal analysis role
+      hadRole: credit:0000003  # formal analysis role
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
     ]  
