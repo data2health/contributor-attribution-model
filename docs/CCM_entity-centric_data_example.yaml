@@ -16,7 +16,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000013  # writing original draft role
+      hadRole: 
+        - code: credit:0000013
+          label: "writing original draft role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
       wasSpecifiedBy: "JBMS author guidelines, v1.2"
@@ -29,7 +33,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000012  # visualization role
+      hadRole:
+        - code: credit:0000012
+          label: "visualization role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
       wasPerformedFor: "NCATS Translator Consortium"
@@ -41,7 +49,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000005  # investigation role
+      hadRole: 
+        - code: credit:0000005
+          label: "investigation role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
       
@@ -52,7 +64,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000002  # curation role
+      hadRole:
+        - code: credit:0000002
+          label: "curation role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -63,7 +79,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000003  # formal analysis role
+      hadRole: 
+        - code: credit:0000003
+          label: "formal analysis role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
             
@@ -74,7 +94,11 @@
         - id: ex:Agent002
           type: cro:Agent
           label: Stacey
-      hadRole: credit:0000008  # resource provider role
+      hadRole:
+        - code: credit:0000008
+          label: "resource provider role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2012-04-01T06:10:00"
       occurredAt: "27599"
       wasSpecifiedBy: "NIH Transgenics Transfer Protocol v3.5" # Note here we reference a protocol related to *provision/transfer* of a resource, not *creation* of a resource
@@ -86,7 +110,11 @@
         - id: ex:Agent003
           type: cro:Agent
           label: Kristi
-      hadRole: credit:0000008  # resource provider role
+      hadRole:
+        - code: credit:0000008
+          label: "resource provider role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2013-04-01T06:10:00"
       occurredAt: "60208"
       wasSpecifiedBy: "NIH Transgenics Transfer Protocol v3.5"
@@ -106,7 +134,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000005  # investigation role
+      hadRole:
+        - code: credit:0000005
+          label: "investigation role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -117,7 +149,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000002  # curation role
+      hadRole:
+        - code: credit:0000002
+          label: "curation role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -128,7 +164,11 @@
         - id: ex:Agent001
           type: cro:Agent
           label: Karen
-      hadRole: credit:0000003  # formal analysis role
+      hadRole:
+        - code: credit:0000003
+          label: "formal analysis role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
     ]
@@ -146,7 +186,11 @@
         - id: ex:Agent002
           type: cro:Agent
           label: Stacey
-      hadRole: XX:XXXXXXX  # creator role (no appropriate role currently in CRO)
+      hadRole: 
+        - code: credit:XXXXXXX
+          label: "creator role" # no appropriate role currently in CRO
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2012-04-01T06:10:00" 
       occurredAt: "27599"
       wasSpecifiedBy: "UNC Animal Facilities Trangenics Protocol V2.6"
@@ -164,7 +208,11 @@
         - id: ex:Agent003
           type: cro:Agent
           label: Kristi
-      hadRole: XX:XXXXXXX  # creator role (no appropriate role currently in CRO)
+      hadRole:
+        - code: credit:XXXXXXX
+          label: "creator role" # no appropriate role currently in CRO
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2010-04-01T06:10:00" 
       occurredAt: "27599"
       wasSpecifiedBy: "Northwestern Medical Center Animal Facilities Trangenics Protocol V2.6"

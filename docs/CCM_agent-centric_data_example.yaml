@@ -16,7 +16,11 @@
           label: "Haendel, Holmes, White, et al. 2015"
           description: "A paper about some stuff we did with mice"
           dateCreated: "2015-01-14"
-      hadRole: credit:0000013  # writing original draft role
+      hadRole: 
+        - code: credit:0000013
+          label: "writing original draft role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
       wasSpecifiedBy: "JBMS author guidelines, v1.2"
@@ -31,7 +35,11 @@
           label: "Haendel, Holmes, White, et al. 2015"
           description: "A paper about some stuff we did with mice"
           dateCreated: "2015-01-14"
-      hadRole: credit:0000012  # visualization role
+      hadRole:
+        - code: credit:0000012
+          label: "visualization role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
       wasPerformedFor: "NCATS Translator Consortium"
@@ -44,7 +52,11 @@
           type: cro:dataset # a subtype of Entity
           label: "shh phenotype dataset 2"
           dateCreated: "2014-04-01"
-      hadRole: credit:0000005  # investigation role
+      hadRole: 
+        - code: credit:0000005
+          label: "investigation role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -55,7 +67,11 @@
         - id: ex:dataset3
           type: cro:dataset # a subtype of Entity
           label: "shh phenotype dataset 2"
-      hadRole: credit:0000002  # curation role
+      hadRole:
+        - code: credit:0000002
+          label: "curation role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
 
@@ -66,7 +82,11 @@
         - id: ex:dataset3
           type: cro:dataset # a subtype of Entity
           label: "shh phenotype dataset 2"
-      hadRole: credit:0000003  # formal analysis role
+      hadRole: 
+        - code: credit:0000003
+          label: "formal analysis role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
     ]  
