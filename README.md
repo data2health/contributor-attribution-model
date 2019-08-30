@@ -10,6 +10,9 @@ This repository will hold modeling artifacts and documentation for a data model 
 - Kristi Holmes (KH)
 - Lisa O'Keefe (LO)
 . . .
+  
+## Status
+The Information Model is currently being developed in draft form [here](https://docs.google.com/document/d/1jMISwIFNj38AUfNZZbT_Osq7vrkmqZYsJ4ubmqEbOa8/edit). Once it is a bit more hardened, it will be moved into a readthedocs website linked to this repository. The other components of the framework listed below will then be generated, based on the content of this Information Model. An initial prototype v0 release is targeted for September 23, 2019.
 
 ## Components 
 The following components will be developed as part of this effort.  
