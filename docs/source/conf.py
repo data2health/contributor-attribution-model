@@ -19,9 +19,10 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Contribution Model'
-copyright = '2019, Matthew Brush'
+project = 'Contributor Attribution Model'
+copyright = '2019, CD2H Contribution Model Contributors'
 author = 'Matthew Brush'
+master_doc = 'index'
 
 
 # -- General configuration ---------------------------------------------------
@@ -48,11 +49,19 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_logo = 'images/cd2h_logo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        ],
+     }
+
 
 html_theme_options = {
     'canonical_url': '',
@@ -63,7 +72,7 @@ html_theme_options = {
     'style_external_links': False,
     'style_nav_header_background': 'white',
     # Toc options
-    'collapse_navigation': True,
+    'collapse_navigation': False,
     'sticky_navigation': True,
     'navigation_depth': 4,
     'includehidden': True,
