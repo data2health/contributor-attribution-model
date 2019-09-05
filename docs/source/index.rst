@@ -4,7 +4,7 @@
 Contributor Attribution Model
 !!!!!!!!!!!!!!!!!!!!!!!
 
-The Contributor Attribution Model (CAM) is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a simple and modular specification for representing information about contributions made to research-related artifacts. Use of this model in the context of data collection and curation systems will facilitate reliable and consistent exchange of computable contribution metadata. 
+The Contributor Attribution Model (CAM) is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a simple and modular specification for representing information about contributions made to research-related artifacts. Use of this model in the context of data collection and curation systems can facilitate reliable and consistent exchange of computable contribution metadata. 
   
 The final CAM Specification will be comprised of the following components: 
 

@@ -6,7 +6,7 @@
 - id: ex:Agent001
   type: cro:Agent
   label: Karen
-  qualifiedContributions: [     
+  qualifiedContributions:      
    - id: ex:contribution001
       type: cro:Contribution  
       label: "Karen's Paper Contribution 1"
@@ -89,6 +89,5 @@
           systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
-    ]  
 
  

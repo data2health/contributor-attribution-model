@@ -8,7 +8,7 @@
   label: "Haendel, Holmes, White, et al. 2015"
   description: "A paper about some stuff we did with mice"
   dateCreated: "2015-01-14"
-  qualifiedContribution: [
+  qualifiedContribution: 
     - id: ex:contribution001
       type: cro:Contribution  
       label: "Karen's Paper Contribution 1"
@@ -119,14 +119,14 @@
       occurredAt: "60208"
       wasSpecifiedBy: "NIH Transgenics Transfer Protocol v3.5"
       mediatingEntity: ex:mouse1   ## exploratory attribute, used when the Agent's contribution to the primary Entity (here, the publication) was indirect, and mediated through their contribution to some upstream Entity that 'influenced' the creation of the primary Entity.
-    ]
+    
 
 # Contributions to the upstream dataset3 (3 total)         
 - id: ex:dataset3
   type: cro:dataset # a subtype of Entity
   label: "shh phenotype dataset 2"
   dateCreated: "2014-04-01"
-  qualifiedContributions:  [    
+  qualifiedContributions:  
     - id: ex:contribution010
       type: cro:Contribution  
       label: "Karen's Dataset Contribution 1"
@@ -171,7 +171,7 @@
           systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-04-01T06:10:00"
       occurredAt: "97210"
-    ]
+    
   
 # Contributions to the upstream mouse1 (1 total)
 - id: ex:mouse1

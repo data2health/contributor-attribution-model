@@ -24,7 +24,6 @@ Scope and Applications
 @@@@@@@@@@@@@@@@@@@@@@
 The scope of the Contributor Attribution Model is limited to representing the nature of an agent's contribution to a research artifact - specifically when, where, how, and in what capacity the contribution was made. It achieves this with a simple and concise model composed of three core classes: an **Artifact**, an **Agent** who contributes to it, and a **Contribution** object that sits between them (**Figure 1**). This simple structure is intended to be used as a *module* in the context of a larger data model that more fully captures the semantics of a given domain or use case.  Implementations can refine or extend the model in different ways to suit their specific domain and use case, as described in more detail in the :ref:`implementation-guide`. 
 
-
 .. figure:: images/introduction_model.png
    :align: center
 
@@ -32,4 +31,9 @@ The scope of the Contributor Attribution Model is limited to representing the na
 
 Application areas for CAM-based modules may include **publishers** capturing author contributions to papers, **curated knoweldgebases** collecting information on curators contributions to annotation records as they mature through the system, **research profiling applications** describing contributions to diverse types of scholarly outputs, **research data management platforms** detailing contributions to data objects they manage, **data repositories** capturing contributions to cataloged data sets, and **software development platforms** capturing contributions to code and other software artifacts. In these contexts, the model can support the collection, provision, and exchange of detailed contribution metadata, display of this metadata to system users, and the ability to perform precise contribution-related queries and computational analyses.
 
+Simple Example
+@@@@@@@@@@@@@@
 
+Below is a simple JSON example of hwo the CAM woudl represent a ___ contribution to a publication made by an agent as a member of the __ organization.  illustrating how the model would represent . . .
+
+Additional and more complex examples can be found in the :ref:`implementation-guide`.

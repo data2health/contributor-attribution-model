@@ -1,6 +1,6 @@
 .. _terms-typo-conventions:
 
-Terms and Typographic Conventions
+Terminological and Typographic Conventions
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   
 * In this documentation we use the term '**class**' to refer to core modeling types in the specification. In other specifications this concept may be referred to as a 'type', 'resource', or 'object'. When referred to as modeling constructs in the text, class names are Capitalized (e.g. ‘Person’, ‘Contribution’)
