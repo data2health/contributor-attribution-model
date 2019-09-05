@@ -34,6 +34,6 @@ Application areas for CAM-based modules may include **publishers** capturing aut
 Simple Example
 @@@@@@@@@@@@@@
 
-Below is a simple JSON example of hwo the CAM woudl represent a ___ contribution to a publication made by an agent as a member of the __ organization.  illustrating how the model would represent . . .
+Below is a simple JSON example of hwo the CAM woudl represent a _ contribution to a publication made by an agent as a member of the __ organization.  illustrating how the model would represent . . .
 
 Additional and more complex examples can be found in the :ref:`implementation-guide`.
