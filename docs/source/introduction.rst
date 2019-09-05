@@ -1,8 +1,8 @@
 Introduction
 !!!!!!!!!!!!
 
-Background
-@@@@@@@@@@
+Background and Motivation
+@@@@@@@@@@@@@@@@@@@@@@@@@
 Open science, team science, and a drive to understand meaningful outcomes have transformed research at all levels. Scholars and researchers contribute to research and scholarship in ways that can no longer be recognized via traditional means of publication counts and grant dollars received. Efforts to rigorously attribute, evaluate, and reward such contributions must be built on a data models that facilitate nuanced and computable characterization of research products, and the context in which they are developed and used. Unfortunately, little infrastructure exists to identify, aggregate, present, and understand the impact of non-traditional contributions (e.g. curation or data analysis). Challenges to recognizing these contributions are technical as well as cultural, and addressing them requires an approach that assimilates various perspectives for investigators and organizations, alike.
 
 
@@ -31,9 +31,9 @@ The scope of the Contributor Attribution Model is limited to representing the na
 
 Application areas for CAM-based modules may include **publishers** capturing author contributions to papers, **curated knoweldgebases** collecting information on curators contributions to annotation records as they mature through the system, **research profiling applications** describing contributions to diverse types of scholarly outputs, **research data management platforms** detailing contributions to data objects they manage, **data repositories** capturing contributions to cataloged data sets, and **software development platforms** capturing contributions to code and other software artifacts. In these contexts, the model can support the collection, provision, and exchange of detailed contribution metadata, display of this metadata to system users, and the ability to perform precise contribution-related queries and computational analyses.
 
-Simple Example
+A Simple Example
 @@@@@@@@@@@@@@
 
-Below is a simple JSON example of hwo the CAM woudl represent a _ contribution to a publication made by an agent as a member of the __ organization.  illustrating how the model would represent . . .
+Below is a simple JSON example of hwo the CAM woudl represent a __ contribution to a publication made by an agent as a member of the __ organization.  illustrating how the model would represent . . .
 
 Additional and more complex examples can be found in the :ref:`implementation-guide`.

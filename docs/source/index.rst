@@ -4,15 +4,15 @@
 Contributor Attribution Model
 !!!!!!!!!!!!!!!!!!!!!!!
 
-The Contributor Attribution Model (CAM) is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a simple and modular specification for representing information about contributions made to research-related artifacts. Use of this model in the context of data collection and curation systems can facilitate reliable and consistent exchange of computable contribution metadata. 
+The Contributor Attribution Model (CAM) is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a simple and modular specification for representing information about contributions made to research-related artifacts. For example, describing when, why, and how a curator contributed to a gene annotation record. Use of this model in the context of data collection and curation systems can facilitate reliable and consistent exchange of computable contribution metadata. 
   
 The final CAM Specification will be comprised of the following components: 
 
-1. An informal, format-agnostic :ref:`information-model`. 
-2. A formal :ref:`JSON-LD schema <json-schema>` specification of the Information Model.
+1. A format-agnostic :ref:`information-model` of the domain.
+2. A :ref:`JSON-LD schema <json-schema>` formalization of the Information Model.
 3. A :ref:`TSV-based format and curation template <tsv-format>`, based on the Information Model.
 4. :ref:`Ontologies <ontologies>` and :ref:`LD-Context Mappings <ld-context>` to support creation of RDF linked data.
-5.  A :ref:`code library and services`<code-and-service>` to support format interchange and identifier and terminology use.
+5.  A :ref:`code library and services <code-and-services>` to support format interchange and identifier and terminology use.
 6. An :ref:`Implementation Guide <implementation-guide>` to support creation of CAM-compliant data in different formats and contexts.
 
 At present only the foundational :ref:`information-model` has been defined, along with the supporting :ref:`Contribution Role Ontology (CRO) <cro-ontology>`. We expect an initial draft of all five components to be complete and ready for a v0 release by the end of Spetember 2019.  
