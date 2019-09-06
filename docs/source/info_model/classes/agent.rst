@@ -57,7 +57,7 @@ Agent
  
 . 
 
-**Implementation Notes**
+**Implementation Notes:**
 
 * **Agent Instances**:
 
@@ -98,7 +98,7 @@ Person
 
 * **Person Contributions in Organizations**: 
 
-    * If the person making a contribution is acting as a member of an organization, this MAY be captured using the organizationalContext attribute of the Contribution class. Alternatively, the Organization itself may be indicated as the agent making the contribution. 
+    * If the person making a contribution is acting as a member of an organization, this MAY be captured using the *organizationalContext* attribute of the Contribution class. Alternatively, the Organization itself may be indicated as the agent making the contribution. 
 
 * **Organization Membership:** 
 
@@ -115,6 +115,68 @@ Person
 Organization
 @@@@@@@@@@@@
 
+**Definition:** A group of agents (typically persons) structured and managed to achieve a common goal. 
+
+**Description and Use:**
+* Organizations as defined here may include and group of individuals organized around a shared task or goal, including companies, academic interest groups, consortia, charitable foundations, formal research collaborations.  A group does not have to be formally recognized as an organization to be treated as such in the CDM.
+* An organization can collectively be credited as making a contribution when it directly or indirectly supports the creation or modification of an artifact, e.g. through funding, defining, directing the work, and/or through its members performing the work.
+ 
+**Information Model:**
+  
+* This class inherits from the :ref:`Agent <agent>` class defined above, and does not define additional attributes.
+
+**Examples:**
+
+* The Global Alliance for Genomics and Health (an international scientific consortia)
+* ClinGen (a national scientific consortia)
+* Elsevier (a publishing and analytics company)
+* The American Heart Association (a medical non-profit organization)
+* The Centers for Disease Control (a government agency)
+* Shriners International (a philanthropic fraternity)
+* A group of students assigned to complete a class project
+ 
+**Implementation Notes:** 
+
+    * **Capturing Organization Contributions:** 
+    
+        * Contributions of an organization to an artifact can be captured in two ways:
+
+            * **Directly** as the asserted agent in a contribution, in cases where it reflects the collective effort of a group, or it is not important to capture the roles or actions of individual members acting on behalf of an organization
+            
+            * **Indirectly** as an organization on whose behalf an individual member's contribution was performed (using the *organizationalContext* attribute of the Contribution class).
+
+    * **Extensions to the Organization Class:** 
+	
+	    * As noted above, this minimal Organization model is meant to be extended with additional attributes by implementations as needed to suit their requirements. We recommend looking to community standards such as `FOAF <http://www.foaf-project.org/>`_ to provide modeling constructs here, to facilitate data sharing and interoperability. 
+
+
+
+
 .. _computational-agent:
 Computational Agent
 @@@@@@@@@@@@@@@@@@@
+
+
+**Definition:** A software program or algorithm that can autonomously execute tasks to achieve a specified goal. 
+
+**Description and Use:**
+
+* A software program need not conceive of or initiate the task on its own to be considered an agent - it must only be capable of autonomously executing a programmed task.
+
+
+**Information Model:**
+  
+* This class inherits from the :ref:`Agent <agent>` class defined above, and does not define additional attributes.
+
+**Examples:**
+
+* An `algorist <https://en.wikipedia.org/wiki/Algorithmic_art>`_ (computer algorithm designed to generate art)
+* An algorithm that automatically generates an ontology by mining text for Wikipedia
+
+ 
+**Implementation Notes:** 
+
+    * **Inferring 'Transitive Credit' to Software Creators**
+	
+	    * As man-made entities, computational agents can be considered Artifacts, and contributions to them can be captured using the CAM. When this is done, 'transitive credit' can be inferred for software creators for Artifacts the software produces.
+
