@@ -1,3 +1,5 @@
+## Welcome
+
 This repository contains modeling artifacts and documentation related to the **Contributor Attribution Model (CAM) Specification**. 
 
 Formal documentation is currently underdevelopment, and can be found at https://contributor-attribution-model.readthedocs.io/en/latest/ 
