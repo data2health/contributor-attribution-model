@@ -1,10 +1,8 @@
 ## Welcome
 
-This repository contains modeling artifacts and documentation related to the **Contributor Attribution Model (CAM) Specification**. 
-
+This repository contains modeling artifacts and documentation related to the **Contributor Attribution Model (CAM) Specification**.
 Formal documentation is currently underdevelopment, and can be found at https://contributor-attribution-model.readthedocs.io/en/latest/ 
 
---------
 
 ## Overview
 The **Contributor Attribution Model (CAM) Specification** is a standard developed within the [Center for Data to Health](https://github.com/data2health) (CD2H) [Architecting Attribution](https://github.com/data2health/architecting_attribution) project. It provides a **simple and tightly scoped specification** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. 
