@@ -1,13 +1,14 @@
+.. _class:
 Classes
 !!!!!!!
 
 Classes in the CAM are types of entities in the domain for which instances are created in the data.
-The following pages provide definitions and descriptions of each core CAM class, a detailed information model for each, and implementation guidance to support users creating instances of the class in their data. 
+The following pages provide **definitions** of each core CAM class, a detailed **information model** for each, and **implementation guidance** and **examples** to support users creating instances of the class in their data. 
 
 
-.. note:: 
+.. Important:: 
 
-         Please be sure to read the :ref:`Terms and Typographical Conventions <terms-typo-conventions>` document before continuing.
+         Please be sure to read the :ref:`Terminological and Typographical Convention <terms-typo-conventions>` notes before continuing.
 
 
 .. toctree::
