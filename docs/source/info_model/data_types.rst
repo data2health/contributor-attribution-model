@@ -28,21 +28,54 @@ string
 * It is the most generic form of free-text literal in our model, and conceptually subsumes string-based data types with more constrained interpretations (e.g. code, identifier, url)   identifiers)  
 * It is most often used to capture names and free-text descriptions of entities in the model or data.
 
-**Examples:** (of attributes taking strings as values)
+**Examples of attributes taking strings as values**::
 
-* ``"label": "author role"``
-* ``"title": "Semantic Web for Dummies"``
-* ``"description": "A cell line derived from cervical tumor cells of a cancer patient"``
-
+    "label": "author role"
+    
+    "title": "Semantic Web for Dummies"
+    
+    "description": "A cell line derived from cervical tumor cells of a cancer patient"
+	
 
 .. _url:
 url
 ###
 
+**Definition:** A Uniform Resource Locator (RFC 1738) representing a web address where a resource can be found or information about the resource discovered. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined.
+
+**Description and Use:**
+
+* Used in place of a plain string datatype when a resolvable web address for a resource is desired.
+* URLs with an http{s} protocol are preferred where available.
+
+**Examples of attributes taking a url as values**::
+
+    "url": "http://purl.obolibrary.org/obo/cro.owl 
+	    (URL of the Contribution Role Ontology)
+
 
 .. _code:
 code
 ####
+
+**Definition:** a string value that is taken from a set of controlled strings defined by some system or authority
+
+**Description and Use:**
+
+* A code can be opaque (e.g. ``CRO:0000001``, ``90210``) or convey meaning (e.g. ``author``, ``AFR``, ``PDX``)
+* In the CAM codes are used primarily within a :ref:`Coding <coding>` object, where they hold the core value of the Coding. Codings and codes are used in Value Sets bound to selected attributes to control data entry.
+
+**Examples of data structures using codes as values:**
+
+ * A ‘Coding’ object, in which the ‘code’ element holds the code "CRO:0000001"::
+
+    “hadRole”: {
+       “system”: “http://purl.obolibrary.org/obo/cro.owl”
+       “systemVersion”: 1.0, 
+       “code”: “CRO:0000001”
+       “label”: “author role”
+    }
+ 
 
 
 .. _identifier:
