@@ -79,7 +79,7 @@ Person
 **Description and Use:**
   
 * Persons are human beings with agency who contribute to artifacts.
-* Person is a concrete sublass of Agent. It can be instantiated in the data, and inherits from its abstract parent Agent class. 
+* Person is a **concrete sublass of Agent**. It can be instantiated in the data, and inherits from its abstract parent Agent class. 
 * At present the CAM does not define additional person-specific attributes - preferring a minimal but extensible model that allows implementation control over how Persons are represented.
 
 **Information Model:**  
@@ -99,16 +99,14 @@ Person
 * **Person Contributions in Organizations**: 
 
     * If the person making a contribution is acting as a member of an organization, this MAY be captured using the *organizationalContext* attribute of the Contribution class. Alternatively, the Organization itself may be indicated as the agent making the contribution. 
-
-* **Organization Membership:** 
-
-    * The details of a Person’s membership in an Organization (dates they were active, roles/status they held, etc.) could support advanced queries relating contributions to organizational membership (e.g. “Find all contributions made in 2014 by persons who were members of organization X that year”).  Details about organizational membership are not yet represented in the CAM, but this capability may be added in the future, and for now implementations can define their own models to support these use cases.
 	 
 * **Extensions to the Person Class**: 
 
     * As noted above, this minimal Person model is meant to be extended with additional attributes by implementations as needed to suit their requirements.  Examples of information that may be useful include given and family name, date of birth, employer, organizational memberships, professional titles, etc.  We recommend looking to community standards such as `FOAF <http://www.foaf-project.org/>`_ to provide modeling constructs here, to facilitate data sharing and interoperability. 
 
+* **Membership in Organizations:** 
 
+    * The details of a Person’s membership in an Organization (dates they were active, roles/status they held, etc.) could support advanced queries relating contributions to organizational membership (e.g. “Find all contributions made in 2014 by persons who were members of organization X that year”).  Details about organizational membership are not yet represented in the CAM, but this capability may be added in the future, and for now implementations can define their own models to support these use cases.
 
 
 .. _organization:
@@ -118,6 +116,8 @@ Organization
 **Definition:** A group of agents (typically persons) structured and managed to achieve a common goal. 
 
 **Description and Use:**
+
+* Organization is a **concrete sublass of Agent**. It can be instantiated in the data, and inherits from its abstract parent Agent class. But at present the CAM does not define additional organization-specific attributes.
 * Organizations as defined here may include and group of individuals organized around a shared task or goal, including companies, academic interest groups, consortia, charitable foundations, formal research collaborations.  A group does not have to be formally recognized as an organization to be treated as such in the CDM.
 * An organization can collectively be credited as making a contribution when it directly or indirectly supports the creation or modification of an artifact, e.g. through funding, defining, directing the work, and/or through its members performing the work.
  
@@ -127,29 +127,22 @@ Organization
 
 **Examples:**
 
-* The Global Alliance for Genomics and Health (an international scientific consortia)
-* ClinGen (a national scientific consortia)
-* Elsevier (a publishing and analytics company)
-* The American Heart Association (a medical non-profit organization)
-* The Centers for Disease Control (a government agency)
-* Shriners International (a philanthropic fraternity)
+* Scientific consortia such as the `Global Alliance for Genomics and Health <https://www.ga4gh.org/>`_ and `ClinGen <https://clinicalgenome.org/>`_.
+* Businesses/companies such as the publisher `Elsevier <https://www.elsevier.com/>`_
+* A medical non-profit organization scuch as the `American Heart Association <https://www2.heart.org>`_
+* A government agency) such as the `Centers for Disease Control <https://www.cdc.gov/>`_
+* A philanthropic fraternity such as `Shriners International <https://www.shrinersinternational.org/>`_
 * A group of students assigned to complete a class project
  
 **Implementation Notes:** 
 
-    * **Capturing Organization Contributions:** 
-    
-        * Contributions of an organization to an artifact can be captured in two ways:
+* **Capturing Organization Contributions:**
 
-            * **Directly** as the asserted agent in a contribution, in cases where it reflects the collective effort of a group, or it is not important to capture the roles or actions of individual members acting on behalf of an organization
-            
-            * **Indirectly** as an organization on whose behalf an individual member's contribution was performed (using the *organizationalContext* attribute of the Contribution class).
+    * Contributions of an organization to an artifact can be captured in two ways: **(1) Directly** as the asserted agent in a contribution, in cases where it reflects the collective effort of a group, or it is not important to capture the roles or actions of individual members acting on behalf of an organization; or **(2) Indirectly** as an organization on whose behalf an individual member's contribution was performed (using the *organizationalContext* attribute of the Contribution class).
 
-    * **Extensions to the Organization Class:** 
-	
-	    * As noted above, this minimal Organization model is meant to be extended with additional attributes by implementations as needed to suit their requirements. We recommend looking to community standards such as `FOAF <http://www.foaf-project.org/>`_ to provide modeling constructs here, to facilitate data sharing and interoperability. 
+* **Extensions to the Organization Class:**
 
-
+	* As noted above, this minimal Organization model is meant to be extended with additional attributes by implementations as needed to suit their requirements. We recommend looking to community standards such as `FOAF <http://www.foaf-project.org/>`_ to provide modeling constructs here, to facilitate data sharing and interoperability.
 
 
 .. _computational-agent:

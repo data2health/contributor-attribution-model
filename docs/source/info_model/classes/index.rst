@@ -2,7 +2,7 @@
 Classes
 !!!!!!!
 
-Classes in the CAM are types of entities in the domain for which instances are created in the data.
+**Classes** in the CAM are types of entities in the domain for which instances are created in the data.
 The following pages provide **definitions** of each core CAM class, a detailed **information model** for each, and **implementation guidance** and **examples** to support users creating instances of the class in their data. 
 
 

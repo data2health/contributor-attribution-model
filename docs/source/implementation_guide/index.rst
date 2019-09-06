@@ -14,3 +14,6 @@ Coming soon . . .
    real_data_examples
    extensions
  
+ --------------------
+ 
+ Specific implementations can select from among these attributes, refine default cardinality constraints, and extend the model with type specializations and additional attributes to suit their domain and use case. 

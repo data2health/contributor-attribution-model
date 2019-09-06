@@ -4,7 +4,7 @@
 Welcome to the Contributor Attribution Model
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-| The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and narrowly scoped specification** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. 
+| The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped specification** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. 
 | It is intended to be **used as a modular component of broader data models** that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. 
   
 The final CAM Specification will be comprised of the following components: 
@@ -16,7 +16,7 @@ The final CAM Specification will be comprised of the following components:
 5.  A :ref:`code library and services <code-and-services>` to support format interchange and identifier and terminology use. ``coming soon``
 6. An :ref:`Implementation Guide <implementation-guide>` to support creation of CAM-compliant data in different formats and contexts. ``coming soon``
 
-.. note:: At present only the foundational :ref:`information-model` has been defined, along with the supporting :ref:`Contribution Role Ontology (CRO) <cro-ontology>`. We expect an initial draft of all five components to be complete and ready for a v0 release by the end of Spetember 2019.  
+.. note:: At present only the foundational :ref:`information-model` has been defined, along with the supporting :ref:`Contribution Role Ontology (CRO) <cro-ontology>`. We expect an initial draft of all six components to be complete and ready for a v0 release by the end of Spetember 2019.  
 
 .. toctree::
    :maxdepth: 4

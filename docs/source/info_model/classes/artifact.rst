@@ -55,7 +55,7 @@ Artifact
      - A more specific type for the artifact.
      - 0..m
      - SHOULD
-     - coding <<:ref:`Artifact Type <artifact-type>`>>*
+     - coding <<:ref:`Artifact Type <artifact-type>`>>
    * - **dateCreated**
      - The date on which the current version or form of the artifact was completed.
      - 0..1
@@ -76,29 +76,33 @@ Artifact
      - 0..m
      - MAY
      - :ref:`Artifact <artifact>`
-
-\* The :ref:`Artifact Type Value Set <artifact-type>` provided as part of this specification is RECOMMENDED but not REQUIRED. Implementations can choose to refine or extend this value set, or use their own.
+.
 
 
 **Examples**
   
-* The Contribution Role Ontology
-* A poster and abstract submission about the Architecting Attribution project
-* A HeLa cell line
-* A protocol for culturing cell lines
-* A dataset about tetrapod bony lesions
-* A catalog entry for a centrifuge instrument
-* The centrifuge itself
-* The complete CIViC knowledgebase containing curated information about cancer mutations
-* An individual record from CIViC about the BRAF V600E mutation.
-* A dinosaur fossil collected and cataloged from a research site.
-* A prehistoric tool fragment collected and cataloged form an archaeological site.
-* An ice specimen collected from an arctic glacier.
-* A catalog record describing the ice specimen.
+* The **Contribution Role Ontology**
+* A **poster** and abstract submission about the Architecting Attribution project
+* A **HeLa cell line**
+* A **protocol** for culturing cell lines
+* A **dataset** about tetrapod bony lesions
+* A **catalog entry** for a centrifuge instrument
+* The **centrifuge** itself
+* The **CIViC knowledgebase** containing curated information about cancer mutations
+* An **individual record** from CIViC about the BRAF V600E mutation.
+* A **dinosaur fossil** collected and cataloged from a research site.
+* A **prehistoric tool fragment specimen** collected and cataloged form an archaeological site.
+* An **ice specimen** collected from an arctic glacier.
+* A **catalog record** describing the ice specimen.
 
 
 **Implementation Notes** 
-  
+ 
+* **Using the Artifact Type Value Set** (*artifactType*)
+
+    * Use of the :ref:`Artifact Type Value Set <artifact-type>` that is bound to the *artifactType* attribute above is RECOMMENDED but not required. 
+    * Implementations can choose to refine or extend this value set that we provide as part of the CAM specification, or use their own, as described in the :ref:`Implementation Guide <implementation-guide>`.
+
 * **Artifact Identifiers** (*id* and *externalID*): 
 
     * Artifact identifiers can be captured using the *id* and *externalID* attributes. The *id* attribute MUST hold a single identifier that will be used to track/reference the artifact in an implementing system.  This can be an internal de novo identifier, or one borrowed from an external resource or registry (e.g. a PMID for a publication, or ISBN for a book).
@@ -117,9 +121,9 @@ Artifact
 * **Natural and Archaeological Artifacts** (*dateCreated* and *dateModified*)
 
     * Many natural or archaeological artifacts originate outside of a research setting, and are only collected and documented as specimens much later (e.g. a dinosaur tooth fossil, or prehistoric tool fragments).  Here, *dateCreated* SHOULD be used to record the date such specimens were taken, not the date they originally came into existence (which may have been thousands or millions of years ago). Similarly, *dateModified* SHOULD be used to record when modifications were last made to the specimen in a research/academic context (e.g. its last cleaning or sample extraction).
-	* In cases where natural specimens are observed and documented, but not physically collected or modified, we RECOMMEND using the CAM to describe contributions to a catalog record about the specimen (as there are no contributions to physical specimen itself to track).
+    * In cases where natural specimens are observed and documented, but not physically collected or modified, we RECOMMEND describing contributions to a catalog record about the specimen (as there are no contributions to physical specimen itself to track).
 	
-* **Relationships Between Artifacts** (*influencedBy*)
+* **Influence Relationships Between Artifacts** (*influencedBy*)
 
     * The notion of an ‘Influence’ between two artifacts broadly describes scenarios where one is directly or indirectly used in the creation of another.  It is based on the PROV notion of `influence <https://www.w3.org/TR/prov-o/#wasInfluencedBy>`_ - but narrower in that it applies here only between two Artifacts. 
     * Influences can include derivation or incorporation of material or informational content - e.g. a cell line being derived from a tumor specimen, use of a jpg image into a blog post, or a format translation from a JSON dataset to an RDF version of the dataset. Influences can also cover an artifact providing a source of information used to generate an artifact with entirely separate content - e.g. a dataset on ice core CO2 levels used as evidence for an assertion about arctic climate change, a microscope/camera used to take images of tissue samples, or a knockout mouse strain used in a study to generate a dataset measuring blood glucose levels  which is used to support curation of a phenotype annotation on the deleted gene).

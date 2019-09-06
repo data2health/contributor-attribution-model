@@ -64,7 +64,7 @@ Contribution
      - A role indicating the nature of the contribution.
      - 0..m
      - MAY
-     - coding <<:ref:`Contribution Role <contribution-role>`>>*
+     - coding <<:ref:`Contribution Role <contribution-role>`>>
    * - **startDate**
      - The date and/or time that the contribution activity began.
      - 0..1
@@ -101,7 +101,7 @@ Contribution
      - MAY
      - :ref:`Funding Source <funding-source>`
 	 
-\* The :ref:`Contribution Role Value Set <contribution-role>` provided as part of this specification is RECOMMENDED but not REQUIRED. Implementations can choose to refine or extend this value set, or use their own.
+.
 
 
 **Examples**
@@ -116,10 +116,16 @@ Contribution
 
 
 **Implementation Notes** 
-  
+ 
+* **Using the Contribution Role Value Set**
+
+    * Use of the :ref:`Contribution Role Value Set <contribution-role>` that is bound to the *realizedRole* attribute above is RECOMMENDED but not required. 
+    * Implementations can choose to refine or extend this value set that we provide as part of the CAM specification, or use their own, as described in the :ref:`Implementation Guide <implementation-guide>`.
+	
 * **‘Placeholder’ Classes** (Location, Method, Funding Source) 
 
     * At present the CAM considers modeling of Location, Method, and Funding Source to be out of scope, and does not provide concrete models for them. Rather, implementations can determine if and how they want to represent these concepts, and model them accordingly. For example, a Location could be captured simply as a free-text string, or an identifier or code from some controlled vocabulary (e.g. any of a number of existing `gazetteers <https://en.wikipedia.org/wiki/Gazetteer#List_of_gazetteers>`_,  such as `Geonames <https://www.geonames.org/>`_), or using a bespoke or standard location schema (e.g. `ISO19112 <https://test.geo.gob.bo/blog/IMG/pdf/iso_19112.pdf>`_), to create location objects allowing more precise and flexible descriptions.
+	
 * **Specifying a Contribution Date** (*startDate* and *endDate*): 
 
     * The model provides *startDate* and *endDate* attributes to allow precise reporting of the time the contribution occurred. Implementations wishing to specify a single time SHOULD simply report the date and/or time that the contribution ended, using the *endDate* attribute, and the *startDate* attribute SHOULD NOT be filled. An empty *startDate* means that the start time is unknown or unspecified.
