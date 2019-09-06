@@ -1,3 +1,5 @@
+.. _data-type:
+
 Data Types
 !!!!!!!!!!
 
