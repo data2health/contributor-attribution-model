@@ -1,6 +1,6 @@
 .. _ontologies:
 
-Ontologies
+Supporting Ontologies
 !!!!!!!!!!
 
 Coming soon . . .

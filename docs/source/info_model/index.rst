@@ -38,7 +38,7 @@ Subsequent pages in this specification, indexed :ref:`below <index1>` and naviga
 
 .. toctree::
    :maxdepth: 2
-   :caption: Index
+   :caption: IM Content Index
    
    classes/index
    data_types
