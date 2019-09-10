@@ -1,0 +1,138 @@
+# The data example below is based on a Variant Interpretation record from the CIViC Knowledgebase (http://civicdb.org), as reported in the API here: https://civicdb.org/api/assertions/10. It describes an assertion that a particular genetic variant predicts sensitivity to treatment with a particular drug regimen in the context of a particular disease, and describes the details of contributions made by four agents during the life-cycle of this assertion record. 
+
+# Exapnsions of identifier pefixes in the data above will be available soon in a JSON-LD context file. Attributes preceded by an underscore (e.g. "_expertise")represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.
+
+- id: civic:AID10
+  type: camo:Artifact
+  artifactType: wd:Q37866906  # information resource
+  label: "AID10"
+  description: "Vemurafenib and cobimetinib combination is an..."
+  url: "https://civicdb.org/api/assertions/10"
+  dateCreated: "2018-11-01T18:54:05.924Z"
+  qualifiedContribution: 
+    - id: ex:contribution001
+      type: cro:Contribution  
+      endDate: "2018-11-01T18:54:05.924Z"
+      hadAgent: 
+        - id: civic:110
+          type: camo:Agent
+          externalId: orcid:0000-0001-9815-2288 
+          label: "Arpad Danos"
+          display_name: "arpaddanos"
+          _expertise: "Research Scientist"
+          _orgRole: "admin"
+      hadRole: 
+        - code: cro:0000XXX 
+          label: "creator role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
+        - code: cro:0000XXX 
+          label: "submitter role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
+      organizationalContext: 
+        - id: wd:Q27612411
+          type: camo:Organization
+          label: "CIViC database"
+          url: "https://civicdb.org/"
+      wasSpecifiedBy: 
+        - id: doi:10.1101/700179
+          type: camo:Method
+          label: "The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer"
+      occurredAt:
+        - id: civic:214
+          type: camo:Location
+          label: "United States"
+          externalID: iso:US
+    - id: ex:contribution002
+      type: cro:Contribution  
+      endDate: "2018-11-08T16:41:28.490Z"
+      hadAgent: 
+        - id: civic:179
+          type: camo:Agent
+          externalId: orcid:0000-0003-1631-1201 
+          label: "Erica Barnell"
+          _display_name: "ebarnell"
+          _expertise: "Research Scientist"
+          _orgRole: "admin"
+      hadRole: 
+        - code: cro:0000XXX 
+          label: "modifier role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
+      organizationalContext: 
+        - id: wd:Q27612411
+          type: camo:Organization
+          label: "CIViC database"
+          url: "https://civicdb.org/"
+      wasSpecifiedBy: 
+        - id: doi:10.1101/700179
+          type: camo:Method
+          label: "The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer"
+      occurredAt:
+        - id: civic:214
+          type: camo:Location
+          label: "United States"
+          externalID: iso:US
+
+    - id: ex:contribution003
+      type: cro:Contribution 
+      endDate: "2018-11-08T16:42:41.111Z"         
+      hadAgent: 
+        - id: civic:3
+          type: camo:Agent
+          externalId: orcid:0000-0002-0843-4271
+          label: "Obi Griffith"
+          _display_name: "obigriffith"
+          _expertise: "Research Scientist"
+          _orgRole: "admin"
+      hadRole: 
+        - code: cro:0000XXX 
+          label: "reviewer role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
+      organizationalContext: 
+        - id: wd:Q27612411
+          type: camo:Organization
+          label: "CIViC database"
+          url: "https://civicdb.org/"
+      wasSpecifiedBy: 
+        - id: doi:10.1101/700179
+          type: camo:Method
+          label: "The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer"
+      occurredAt:
+        - id: civic:214
+          type: camo:Location
+          label: "United States"
+          externalID: iso:US
+
+    - id: ex:contribution004
+      type: cro:Contribution 
+      endDate: "2018-11-08T16:42:21.820Z"         
+      hadAgent: 
+        - id: civic:179
+          type: camo:Agent
+          externalId: orcid:0000-0003-1631-1201
+          label: "Erica Barnell"
+          _display_name: "ebarnell"
+          _expertise: "Research Scientist"
+          _orgRole: "admin"
+      hadRole: 
+        - code: cro:0000XXX 
+          label: "acceptor role"
+          system: Contribution Role Ontology
+          systemURL: http://purl.obolibrary.com/obo/cro.owl
+      organizationalContext: 
+        - id: wd:Q27612411
+          type: camo:Organization
+          label: "CIViC database"
+          url: "https://civicdb.org/"
+      wasSpecifiedBy: 
+        - id: doi:10.1101/700179
+          type: camo:Method
+          label: "The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer"
+      occurredAt:
+        - id: civic:214
+          type: camo:Location
+          label: "United States"
+          externalID: iso:US
