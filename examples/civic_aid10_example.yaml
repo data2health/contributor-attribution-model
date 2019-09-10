@@ -1,6 +1,6 @@
-# The data example below is based on a Variant Interpretation record from the CIViC Knowledgebase (http://civicdb.org), as reported in the API here: https://civicdb.org/api/assertions/10. It describes an assertion that a particular genetic variant predicts sensitivity to treatment with a particular drug regimen in the context of a particular disease, and describes the details of contributions made by four agents during the life-cycle of this assertion record. 
+# The example below shows contribution metadata from `this variant interpretation record (https://civicdb.org/api/assertions/10) in the `CIViC Knowledgebase (http://civicdb.org), structured according to the CAM specification. The record includes details of contributions made by four agents during the life-cycle of this curated record. 
 
-# Exapnsions of identifier pefixes in the data above will be available soon in a JSON-LD context file. Attributes preceded by an underscore (e.g. "_expertise")represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.
+# Exapnsions of identifier pefixes in the data below will be available soon in a JSON-LD context file. Attributes preceded by an underscore (e.g. "_expertise") represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.
 
 - id: civic:AID10
   type: camo:Artifact
