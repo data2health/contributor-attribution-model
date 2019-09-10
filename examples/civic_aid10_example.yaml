@@ -22,11 +22,11 @@
           _expertise: "Research Scientist"
           _orgRole: "admin"
       hadRole: 
-        - code: cro:0000XXX 
+        - code: cro:0000107 
           label: "creator role"
           system: Contribution Role Ontology
           systemURL: http://purl.obolibrary.com/obo/cro.owl
-        - code: cro:0000XXX 
+        - code: cro:0000105 
           label: "submitter role"
           system: Contribution Role Ontology
           systemURL: http://purl.obolibrary.com/obo/cro.owl
@@ -57,7 +57,7 @@
           _expertise: "Research Scientist"
           _orgRole: "admin"
       hadRole: 
-        - code: cro:0000XXX 
+        - code: cro:0000103 
           label: "modifier role"
           system: Contribution Role Ontology
           systemURL: http://purl.obolibrary.com/obo/cro.owl
@@ -88,8 +88,8 @@
           _expertise: "Research Scientist"
           _orgRole: "admin"
       hadRole: 
-        - code: cro:0000XXX 
-          label: "reviewer role"
+        - code: cro:0000106 
+          label: "evaluator role"
           system: Contribution Role Ontology
           systemURL: http://purl.obolibrary.com/obo/cro.owl
       organizationalContext: 
@@ -119,7 +119,7 @@
           _expertise: "Research Scientist"
           _orgRole: "admin"
       hadRole: 
-        - code: cro:0000XXX 
+        - code: cro:0000104 
           label: "acceptor role"
           system: Contribution Role Ontology
           systemURL: http://purl.obolibrary.com/obo/cro.owl
