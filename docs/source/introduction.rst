@@ -86,7 +86,7 @@ The example below shows contribution metadata from `this variant interpretation 
 			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
 			},
 			{
-			"code": "cro:0000XXX",
+			"code": "cro:0000105",
 			"label": "submitter role",
 			"system": "Contribution Role Ontology",
 			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
