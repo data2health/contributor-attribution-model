@@ -24,7 +24,7 @@
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
       wasSpecifiedBy: "JBMS author guidelines, v1.2"
-      wasPerformedFor: "NCATS Translator Consortium"
+      organizationalContext: "NCATS Translator Consortium"
 
     - id: ex:contribution002
       type: cro:Contribution  
@@ -42,7 +42,7 @@
           systemURL: http://purl.obolibrary.com/obo/cro.owl
       endDate: "2014-12-01T06:10:00"
       occurredAt: "97210"
-      wasPerformedFor: "NCATS Translator Consortium"
+      organizationalContext: "NCATS Translator Consortium"
       
     - id: ex:contribution010
       type: cro:Contribution  

@@ -44,6 +44,7 @@
           type: camo:Location
           label: "United States"
           externalID: iso:US
+
     - id: ex:contribution002
       type: cro:Contribution  
       endDate: "2018-11-08T16:41:28.490Z"
