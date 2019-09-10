@@ -1,7 +1,8 @@
 Placeholder Classes
 !!!!!!!!!!!!!!!!!!!
 
-At present the CAM considers modeling of Location, Method, and Funding Source to be out of scope, and does not provide concrete models for them. Rather, implementations can determine if and how they want to represent these concepts, and model them accordingly. Below we describe and provide modeling recommendations for each of these classes, but do not formally define a specification for them.
+
+The CAM defines the value of the *occurredAt*, *wasSpecifiedBy*, and *hadFundingSource* attributes of the :ref:`Contribution <contribution>` object as a :ref:`Location<location>`, :ref:`Method <method>`, and :ref:`Funding Source <funding-source>`, respectively.  At present, however, classes to represent these concepts are condidered out of scope, and the specification does not provide concrete models for them.  We refer to these as '**Placeholder Classes**', and provide descriptions and modeling recommendations for each. But we ultimately leave it to implementations to determine if and how they want to represent these concepts.
 
 
 .. _location:

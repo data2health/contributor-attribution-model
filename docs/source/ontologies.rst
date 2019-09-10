@@ -13,6 +13,9 @@ Coming soon . . .
 
 .. _cro-ontology:
 
+
+.. Relationships describing Contributions are named in the past tense becuase they express what has happened in the past.
+
 Contribution Role Ontology
 @@@@@@@@@@@@@@@@@@@@@@@@@@@
 

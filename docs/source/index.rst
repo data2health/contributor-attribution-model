@@ -10,8 +10,8 @@ Welcome to the Contributor Attribution Model
 The final CAM Specification will be comprised of the following **six components**. More information about each can be found using the links below, or navigating the **Site Contents** menu to the left.
 
 1. A format-agnostic :ref:`information-model` of the domain.
-2. A :ref:`JSON-LD schema <json-schema>` formalization of the Information Model. ``coming soon`` 
-3. A :ref:`TSV-based format and curation template <tsv-format>`, based on the Information Model. ``coming soon``
+2. A formal :ref:`JSON-LD schema <json-schema>` specification of the Information Model. ``coming soon`` 
+3. A :ref:`TSV format and curation template <tsv-format>`, based on the Information Model. ``coming soon``
 4. :ref:`Ontologies <ontologies>` and :ref:`LD-Context Mappings <ld-context>` to support creation of RDF linked data. ``coming soon``
 5.  A :ref:`code library and services <code-and-services>` to support data creation and format interchange. ``coming soon``
 6. An :ref:`Implementation Guide <implementation-guide>` to support creation of CAM-compliant data in different formats and contexts. ``coming soon``

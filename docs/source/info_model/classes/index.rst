@@ -8,11 +8,12 @@ The following pages provide **definitions** of each core CAM class, a detailed *
 
 .. Important:: 
 
-         Please be sure to read the :ref:`Terminological and Typographical Convention <terms-typo-conventions>` notes before continuing.
+         Please read the :ref:`Terminological and Typographical Convention <terms-typo-conventions>` notes before continuing.
 
 
 .. toctree::
    :maxdepth: 2
+  
    
    artifact
    contribution

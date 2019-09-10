@@ -9,15 +9,14 @@ Contribution
 
 **Definition**: An action or set of actions performed by an agent toward the creation, modification, evaluation, or deprecation of an artifact. 
 
-**Description and Use**
- 
+**Description and Use:**
+
+* The Contribution class is the the core object in the CAM. They mediate a link between an Agent and an Artifact, and organize information about when, where, how, and in what context the agent contributed to the artifact.
 * Ontologically, contributions are considered a type of process or activity. The scope of a Contribution activity includes only the actions of a single agent in contributing to a particular artifact, which may be performed in one continuous effort, or several discontinuous sessions of work.
-* Contribution instances mediate the link between an agent and an artifact in the data, and organize information about when, where, how, and in what context contributions to the artifact were made.
 * Contribution activities may include those leading to the initial creation or subsequent modification of an artifact, as well as activities that evaluate the artifact (e.g. to gauge its quality, completeness, status, or utility), or activities that deprecate an artifact such that it may no longer be used. 
 
 
-
-**Information Model**
+**Information Model:**
 
 
 .. list-table::
@@ -104,7 +103,7 @@ Contribution
 .
 
 
-**Examples**
+**Examples:**
   
 * The writing performed by a person toward the creation of a scientific publication (realizes an 'author role')
 * The act of sharing of frozen embryonic fibroblasts performed by a researcher toward the creation of a transgenic mouse (realizes a 'resource provision role')
@@ -115,7 +114,7 @@ Contribution
 
 
 
-**Implementation Notes** 
+**Implementation Notes:** 
  
 * **Using the Contribution Role Value Set**
 
