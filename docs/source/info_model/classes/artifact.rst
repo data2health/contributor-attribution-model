@@ -66,6 +66,11 @@ Artifact
      - 0..1
      - MAY
      - :ref:`dateTime <dateTime>`
+   * - **url**
+     - A URL where information about the Artifact can be found.
+     - 0..m
+     - MAY
+     - :ref:`url <url>`
    * - **qualified Contribution**
      - A particular contribution made by an agent to the artifact.
      - 0..m

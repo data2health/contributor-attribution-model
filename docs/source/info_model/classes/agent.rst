@@ -49,6 +49,11 @@ Agent
      - 0..m
      - MAY
      - :ref:`identifier <identifier>`
+   * - **url**
+     - A URL where information about the Agent can be found.
+     - 0..m
+     - MAY
+     - :ref:`url <url>`
    * - **qualified Contribution**
      - A particular contribution made by the agent to an artifact.
      - 0..m

@@ -49,10 +49,72 @@ Applications implementing CAM-based modules may include:
 In these contexts, the model can support the **collection**, **provision**, and **exchange** of detailed contribution metadata, **display** of this metadata to system users, and the ability to perform precise contribution-related **queries** and **computational analyses**.
 
 
-A Simple Example
+A Data Example
 @@@@@@@@@@@@@@
 
-*TO DO: add exampe of a curator contribution to a CIViC database record.*
+The example below shows contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the `CIViC Knowledgebase <http://civicdb.org>`_, structured according to the CAM specification. The record includes details of contributions made by four agents during the life-cycle of this curated record. The simple example below captures just one of these contributions, but the `complete example here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_ shows all four. Additional data examples can be found as part of the :ref:`Implementation Guide <implementation-guide>`.
 
+::
 
-Additional and more complex examples can be found in the :ref:`implementation-guide`.
+	"id": "civic:AID10",
+	"type": "camo:Artifact",
+	"artifactType": "wd:Q37866906",
+	"label": "AID10",
+	"description": "Vemurafenib and cobimetinib combination is an...",
+	"url": "https://civicdb.org/api/assertions/10",
+	"dateCreated": "2018-11-01T18:54:05.924Z",
+	"qualifiedContribution": [
+		{
+		"id": "ex:contribution001",
+		"type": "cro:Contribution",
+		"endDate": "2018-11-01T18:54:05.924Z",
+		"hadAgent":
+			{
+			"id": "civic:110",
+			"type": "camo:Agent",
+			"externalId": "orcid:0000-0001-9815-2288",
+			"label": "Arpad Danos",
+			"_display_name": "arpaddanos",
+			"_expertise": "Research Scientist",
+			"_orgRole": "admin"
+			},
+		"hadRole": [
+			{
+			"code": "cro:0000XXX",
+			"label": "creator role",
+			"system": "Contribution Role Ontology",
+			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+			},
+			{
+			"code": "cro:0000XXX",
+			"label": "submitter role",
+			"system": "Contribution Role Ontology",
+			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+			}
+		   ],
+		"organizationalContext":
+			{
+			"id": "wd:Q27612411",
+			"type": "camo:Organization",
+			"label": "CIViC database",
+			"url": "https://civicdb.org/"
+			},
+		"wasSpecifiedBy": 
+			{
+			"id": "doi:10.1101/700179",
+			"type": "camo:Method",
+			"label": "The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer"
+			},
+		"occurredAt":
+			{
+			"id": "civic:214",
+			"type": "camo:Location",
+			"label": "United States",
+			"externalID": "iso:US"
+			}
+	    }
+	]
+
+Exapnsions of identifier pefixes in the data above are provided in a :ref:`JSON-LD context file <ld-context>`.  
+
+Attributes preceded by an underscore (e.g. ``"_expertise"``) represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.
