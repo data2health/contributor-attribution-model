@@ -52,7 +52,7 @@ In these contexts, the model can support the **collection**, **provision**, and 
 A Data Example
 @@@@@@@@@@@@@@
 
-The example below shows contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the `CIViC Knowledgebase <http://civicdb.org>`_, structured according to the CAM specification. The record includes details of contributions made by four agents during the life-cycle of this curated record. The simple example below captures just one of these contributions, but the `complete example here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_ shows all four. Additional data examples can be found as part of the :ref:`Implementation Guide <implementation-guide>`.
+The example below shows contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the `CIViC Knowledgebase <http://civicdb.org>`_, structured according to the CAM specification. The record includes details of contributions made by four agents during the life-cycle of this curated record. The example below captures just one of these contributions, but the `complete example here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_ describes all four of them. Additional data examples are provided as part of the :ref:`Implementation Guide <implementation-guide>`.
 
 ::
 

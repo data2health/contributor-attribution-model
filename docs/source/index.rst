@@ -25,6 +25,7 @@ The final CAM Specification will be comprised of the following **six components*
    introduction
    info_model/index
    schema/index
+   tsv_format
    ontologies
    code_and_services
    implementation_guide/index
