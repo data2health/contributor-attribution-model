@@ -49,10 +49,50 @@ Applications implementing CAM-based modules may include:
 In these contexts, the model can support the **collection**, **provision**, and **exchange** of detailed contribution metadata, **display** of this metadata to system users, and the ability to perform precise contribution-related **queries** and **computational analyses**.
 
 
-A Data Example
-@@@@@@@@@@@@@@
+Data Examples
+@@@@@@@@@@@@@
 
-The example below shows contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the `CIViC Knowledgebase <http://civicdb.org>`_, structured according to the CAM specification. The record includes details of contributions made by four agents during the life-cycle of this curated record. The example below captures just one of these contributions, but the `complete example here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_ describes all four of them. Additional data examples are provided as part of the :ref:`Implementation Guide <implementation-guide>`.
+
+**1. A Minimal Contribution Metadata Example:**
+The example below shows metadata describing one author's contribution to the publication of a `journal article <https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006186#authcontrib>`_, structured according to the CAM specification. The record describes only the role the agent played, and the organiational context in which the contribution was made.
+
+::
+
+	"id": "doi:10.1371/journal.pgen.1006186",
+	"type": "camo:Artifact",
+	"artifactType": "wd:Q18918145",
+	"label": "Epistatic Gene-Based Interaction Analyses for Glaucoma in eMERGE and NEIGHBOR Consortium",
+	"dateCreated": "2016-09-13",
+	"qualifiedContribution": [
+        {
+		"id": "ex:contribution001",
+		"type": "cro:Contribution",
+		"hadAgent": 
+			{
+			"id": "ex:agent001",
+			"type": "camo:Agent",
+			"label": "Cathy McCarty"
+			},
+		"hadRole": 
+			{
+			"code": "cro:0000055",
+			"label": "study design role",
+			"system": "Contribution Role Ontology",
+			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+			},
+		"organizationalContext": 
+			{
+			"id": "ex:org001",
+			"type": "camo:Organization",
+			"label": "eMERGE Network",
+			"url": "https://emerge.mc.vanderbilt.edu/"
+			}
+          }
+		]
+
+
+**2. A Rich Contribution Metadata Example:**
+The example below shows much richer contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the `CIViC Knowledgebase <http://civicdb.org>`_, structured according to the CAM specification. The record includes details of when, how, where, and in what context contributions were made by four agents during the life-cycle of this curated record. The example below captures just one of these contributions, but the `complete example here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_ describes all four of them. Additional data examples are provided as part of the :ref:`Implementation Guide <implementation-guide>`.
 
 ::
 

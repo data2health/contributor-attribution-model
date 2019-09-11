@@ -33,7 +33,7 @@
       organizationalContext: 
         - id: wd:Q27612411
           type: camo:Organization
-          label: "CIViC database"
+          label: "CIViC"
           url: "https://civicdb.org/"
       wasSpecifiedBy: 
         - id: doi:10.1101/700179
