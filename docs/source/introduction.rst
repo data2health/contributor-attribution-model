@@ -59,9 +59,9 @@ This simple example includes minimal metadata describing one author's contributi
 
 ::
 
-	"id": "doi:10.1371/journal.pgen.1006186", # the Artifact
+	"id": "doi:10.1371/journal.pgen.1006186", # the Artifact (a published journal article)
 	"type": "camo:Artifact",
-	"artifactType": "wd:Q18918145",
+	"artifactType": "wd:Q18918145" (journal article),
 	"label": "Epistatic Gene-Based Interaction Analyses for Glaucoma in eMERGE and NEIGHBOR Consortium",
 	"dateCreated": "2016-09-13",
 	"qualifiedContribution": [  # the Contribution
@@ -98,9 +98,9 @@ This richer example includes more extensive contribution metadata from `this var
 
 ::
 
-	"id": "civic:AID10",  # the Artifact
+	"id": "civic:AID10",  # the Artifact (a curated variant interpretation record)
 	"type": "camo:Artifact",
-	"artifactType": "wd:Q37866906",
+	"artifactType": "wd:Q49848",
 	"label": "AID10",
 	"description": "Vemurafenib and cobimetinib combination is an...",
 	"url": "https://civicdb.org/api/assertions/10",
