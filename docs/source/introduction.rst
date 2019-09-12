@@ -1,18 +1,17 @@
-Introduction
-!!!!!!!!!!!!
+Overview
+!!!!!!!!
 
-| The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped specification** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. 
-| It is intended to be **used as a modular component of broader data models** that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. 
+The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped data model** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. This core model is intended to be **used as a modular component of broader data models** that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. Additional components of the CAM specification support implementation of the model, data collection, and ontology-based query and analysis of contribution metadata. 
 
 Background and Motivation
 @@@@@@@@@@@@@@@@@@@@@@@@@
 Open science, team science, and a drive to understand meaningful outcomes have transformed research at all levels. Scholars and researchers contribute to research and scholarship in ways that can no longer be recognized via traditional means of publication counts and grant dollars received. Efforts to rigorously attribute, evaluate, and reward such contributions must be built on a data models that facilitate nuanced and computable characterization of research products, and the context in which they are developed and used. Unfortunately, little infrastructure exists to identify, aggregate, present, and understand the impact of non-traditional contributions (e.g. curation or data analysis). Challenges to recognizing these contributions are technical as well as cultural, and addressing them requires an approach that assimilates various perspectives for investigators and organizations, alike.
 
-Here we define a simple yet powerful ontology-based **Contributor Attribution Model (CAM)** Specification that aims to address these challenges, and is comprised of hte following components:
+| Here we define an ontology-based **Contributor Attribution Model (CAM)** specification that aims to address these challenges. The data model itself was designed to be **as simple, intuitive, and concise a representation as possible**, so as to minimize barriers to adoption by diverse systems where use of community standards has historically been an unexplored or prohibitive endeaevor.  
+| The specification as a whole includes the following components:
 
 Specification Components
 @@@@@@@@@@@@@@@@@@@@
-
 
 
 1. An :ref:`information-model` (IM) that represents an informal, format-agnostic specification of the domain.
@@ -35,6 +34,14 @@ The scope of the Contributor Attribution Model is limited to representing the na
 
 This three object structure is intended to be used as a **module** in the context of a larger data model that captures the complete semantics of a given domain or use case. Implementations can refine or extend the CAM in different ways to suit their specific domain and use case, as described in more detail in the :ref:`implementation-guide`. 
 
+
+Relationship to PROV
+@@@@@@@@@@@@@@@@@@@@
+The CAM is based on a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers contributor attribution, but has been tailored to fit our use case more directly. The CAM was developed independently from PROV due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented it from meeting our primary requirement for as simple and concise a model as necessary. But ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension/profile of PROV.  
+
+Mappings between the CAM and PROV models are provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, which is also based on the PROV model, are also described here.
+
+
 Application Use Cases
 @@@@@@@@@@@@@@@@@@@@@
 Applications implementing CAM-based modules may include:
@@ -46,7 +53,7 @@ Applications implementing CAM-based modules may include:
 * **Data repositories** capturing contributions to cataloged data sets.
 * **Software development platforms** capturing contributions to code and other software artifacts. 
 
-In these contexts, the model can support the **collection**, **provision**, and **exchange** of detailed contribution metadata, **display** of this metadata to system users, and the ability to perform precise contribution-related **queries** and **computational analyses**.
+In these contexts, the model can support the **collection**, **provision**, and **exchange** of detailed contribution metadata, **display** of this metadata to system users, and the ability to perform precise contribution-related **queries** and **computational analyses**. 
 
 
 Data Examples

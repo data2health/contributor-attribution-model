@@ -2,15 +2,14 @@
    sphinx-quickstart on Tue Sep  3 09:48:09 2019.
 
 Welcome to the Contributor Attribution Model
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-| The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped specification** for representing information about contributions made to research-related artifacts - for example how, when, and in what context a curator contributed to a gene annotation record. 
-| It is intended to be **used as a modular component of broader data models** that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. 
+The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped data model** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. This core model is intended to be **used as a modular component of broader data models** that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. Additional components of the CAM specification support implementation of the model, data collection, and ontology-based query and analysis of contribution metadata. 
   
 The final CAM Specification will be comprised of the following **six components**. More information about each can be found using the links below, or navigating the **Site Contents** menu to the left.
 
 1. A format-agnostic :ref:`information-model` of the domain.
-2. A formal :ref:`JSON-LD schema <json-schema>` specification of the Information Model. ``coming soon`` 
+2. A formal :ref:`JSON-LD schema <json-schema>` serialization of the Information Model. ``coming soon`` 
 3. A :ref:`TSV format and curation template <tsv-format>`, based on the Information Model. ``coming soon``
 4. :ref:`Ontologies <ontologies>` and :ref:`LD-Context Mappings <ld-context>` to support creation of RDF linked data. ``coming soon``
 5.  A :ref:`code library and services <code-and-services>` to support data creation and format interchange. ``coming soon``
@@ -29,6 +28,7 @@ The final CAM Specification will be comprised of the following **six components*
    tsv_format
    code_and_services
    implementation_guide/index
+   appendices/index
 
 
 
