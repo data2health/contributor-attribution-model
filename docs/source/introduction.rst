@@ -111,7 +111,7 @@ This richer example includes more extensive contribution metadata from `this var
 	"label": "AID10",
 	"description": "Vemurafenib and cobimetinib combination is an...",
 	"url": "https://civicdb.org/api/assertions/10",
-	"dateCreated": "2018-11-01T18:54:05.924Z",
+	"dateCreated": "2018-11-08T16:42:21.820Z",
 	"qualifiedContribution": [   # the Contribution
 		{
 		"id": "ex:contribution001",
