@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; Contributor Attribution Model  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Information Model" href="info_model/index.html" />
+    <link rel="prev" title="Welcome to the Contributor Attribution Model" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Contributor Attribution Model
+          
+
+          
+            
+            <img src="_static/cd2h_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Site Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background-and-motivation">Background and Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specification-components">Specification Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modeling-scope">Modeling Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relationship-to-prov">Relationship to PROV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-use-cases">Application Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-examples">Data Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="info_model/index.html">Information Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="info_model/classes/index.html">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="info_model/classes/artifact.html">Artifact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info_model/classes/contribution.html">Contribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info_model/classes/agent.html">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="info_model/classes/agent.html#id2">Person</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/classes/agent.html#id4">Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/classes/agent.html#id6">Computational Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="info_model/classes/placeholders.html">Placeholder Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="info_model/classes/placeholders.html#id1">Location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/classes/placeholders.html#id2">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/classes/placeholders.html#id3">Funding Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="info_model/data_types.html">Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="info_model/data_types.html#simple-data-types">Simple Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#id1">string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#id2">url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#code">code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#identifier">identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#id6">class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#id7">date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#id8">dateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#id10">duration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="info_model/data_types.html#complex-data-types">Complex Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="info_model/data_types.html#coding">Coding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="info_model/value_sets.html">Value Sets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="info_model/value_sets.html#contribution-role-value-set">Contribution Role Value Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info_model/value_sets.html#artifact-type-value-set">Artifact Type Value Set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="schema/index.html">Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schema/json_schema.html">JSON Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="schema/json_schema.html#ld-context">LD-Context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ontologies.html">Supporting Ontologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html#contribution-model-ontology">Contribution Model Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html#contribution-role-ontology">Contribution Role Ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tsv_format.html">Curation Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_and_services.html">Code and Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation_guide/index.html">Implementation Guide</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/index.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendices/relationships_to_standards.html">I. Relationship to Existing Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendices/relationships_to_standards.html#w3c-prov">W3C PROV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices/relationships_to_standards.html#fhir-provenance-resource">FHIR ‘Provenance’ Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices/relationships_to_standards.html#vivo-openrif">VIVO / openRIF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Contributor Attribution Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Contributor Attribution Model (CAM) Specification</strong> is a standard developed within the <a class="reference external" href="https://github.com/data2health">Center for Data to Health</a> (CD2H) <a class="reference external" href="https://github.com/data2health/architecting_attribution">Architecting Attribution</a> project. It provides a <strong>simple and tightly scoped data model</strong> for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. This core model is intended to be <strong>used as a modular component of broader data models</strong> that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. Additional components of the CAM specification support implementation of the model, data collection, and ontology-based query and analysis of contribution metadata.</p>
+<div class="section" id="background-and-motivation">
+<h2>Background and Motivation<a class="headerlink" href="#background-and-motivation" title="Permalink to this headline">¶</a></h2>
+<p>Open science, team science, and a drive to understand meaningful outcomes have transformed research at all levels. Scholars and researchers contribute to research and scholarship in ways that can no longer be recognized via traditional means of publication counts and grant dollars received. Efforts to rigorously attribute, evaluate, and reward such contributions must be built on a data models that facilitate nuanced and computable characterization of research products, and the context in which they are developed and used. Unfortunately, little infrastructure exists to identify, aggregate, present, and understand the impact of non-traditional contributions (e.g. curation or data analysis). Challenges to recognizing these contributions are technical as well as cultural, and addressing them requires an approach that assimilates various perspectives for investigators and organizations, alike.</p>
+<div class="line-block">
+<div class="line">Here we define an ontology-based <strong>Contributor Attribution Model (CAM)</strong> specification that aims to address these challenges. The data model itself was designed to be <strong>as simple, intuitive, and concise a representation as possible</strong>, so as to minimize barriers to adoption by diverse systems where use of community standards has historically been an unexplored or prohibitive endeavor.</div>
+<div class="line">The specification as a whole includes the following components:</div>
+</div>
+</div>
+<div class="section" id="specification-components">
+<h2>Specification Components<a class="headerlink" href="#specification-components" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>An <a class="reference internal" href="info_model/index.html#information-model"><span class="std std-ref">Information Model</span></a> (IM) that represents an informal, format-agnostic specification of the domain.</p></li>
+<li><p>A <a class="reference internal" href="schema/json_schema.html#json-schema"><span class="std std-ref">JSON-LD schema</span></a> that provides a computable specification of the IM to support data creation and validation. This includes an Linked Data (LD)-context document with mappings between schema elements and ontology terms, enabling the creation of RDF/Linked Data. <code class="docutils literal notranslate"><span class="pre">coming</span> <span class="pre">soon</span></code></p></li>
+<li><p>A <a class="reference internal" href="tsv_format.html#tsv-format"><span class="std std-ref">Tabular File Format</span></a> representation of the IM that provides a low-tech, curator friendly tool for collecting contribution metadata. <code class="docutils literal notranslate"><span class="pre">coming</span> <span class="pre">soon</span></code></p></li>
+<li><p><a class="reference internal" href="ontologies.html#ontologies"><span class="std std-ref">Ontologies</span></a> that provide a semantic foundation for the data model. These will support a complete ontological mapping of schema elements and provide terms for value sets - enabling ontological support for operating on contribution metadata. <code class="docutils literal notranslate"><span class="pre">coming</span> <span class="pre">soon</span></code></p></li>
+<li><p>A <a class="reference internal" href="code_and_services.html#code-and-services"><span class="std std-ref">Code Library and Services</span></a> that can support interconversion of data formats (e.g. tabular to RDF), identifier mappings, and terminology support for building valu sets. <code class="docutils literal notranslate"><span class="pre">coming</span> <span class="pre">soon</span></code></p></li>
+<li><p>An <a class="reference internal" href="implementation_guide/index.html#implementation-guide"><span class="std std-ref">Implementation Guide</span></a> to support creation of CAM-compliant data in different formats and contexts. <code class="docutils literal notranslate"><span class="pre">coming</span> <span class="pre">soon</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="modeling-scope">
+<h2>Modeling Scope<a class="headerlink" href="#modeling-scope" title="Permalink to this headline">¶</a></h2>
+<p>The scope of the Contributor Attribution Model is limited to representing the nature of an agent’s contribution to a research artifact - specifically when, where, how, and in what context the contribution was made. It achieves this with a simple and concise model composed of three core classes: an <strong>Artifact</strong>, an <strong>Agent</strong> who contributes to it, and a <strong>Contribution</strong> object that sits between them (<strong>Figure 1</strong>).</p>
+<div class="figure align-center" id="id1">
+<img alt="_images/introduction_model.png" src="_images/introduction_model.png" />
+<p class="caption"><span class="caption-text"><strong>Figure 1</strong>: Definition of core classes and relationships in the CAM. A structured representation of each class can be found in the <a class="reference internal" href="info_model/index.html#information-model"><span class="std std-ref">Information Model</span></a>, and a formal specification provided by a <a class="reference internal" href="schema/json_schema.html#json-schema"><span class="std std-ref">JSON schema</span></a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>This three object structure is intended to be used as a <strong>module</strong> in the context of a larger data model that captures the complete semantics of a given domain or use case. Implementations can refine or extend the CAM in different ways to suit their specific domain and use case, as described in more detail in the <a class="reference internal" href="implementation_guide/index.html#implementation-guide"><span class="std std-ref">Implementation Guide</span></a>.</p>
+</div>
+<div class="section" id="relationship-to-prov">
+<h2>Relationship to PROV<a class="headerlink" href="#relationship-to-prov" title="Permalink to this headline">¶</a></h2>
+<p>The CAM is based on a subset of the <a class="reference external" href="https://www.w3.org/2011/prov/wiki/Main_Page">W3C PROV specification</a> that covers contributor attribution, but has been tailored to fit our use case more directly. The CAM was developed independently from PROV due to a few small but significant semantic and normative incompatibilities (see <a class="reference internal" href="appendices/relationships_to_standards.html#relationship-to-standards"><span class="std std-ref">Appendix I</span></a>), which prevented it from meeting our primary requirement for as simple and concise a model as necessary. But ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension/profile of PROV.</p>
+<p>Mappings between the CAM and PROV models are provided in <a class="reference internal" href="appendices/relationships_to_standards.html#relationship-to-standards"><span class="std std-ref">Appendix I</span></a>, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the <a class="reference external" href="https://www.hl7.org/fhir/provenance.html">FHIR Provenance resource</a>, which is also based on the PROV model, are also described here.</p>
+</div>
+<div class="section" id="application-use-cases">
+<h2>Application Use Cases<a class="headerlink" href="#application-use-cases" title="Permalink to this headline">¶</a></h2>
+<p>Applications implementing CAM-based modules may include:</p>
+<ul class="simple">
+<li><p><strong>Publishers</strong> capturing author contributions to papers.</p></li>
+<li><p><strong>Curated knoweldgebases</strong> collecting information on curators contributions to annotation records as they mature through the system.</p></li>
+<li><p><strong>Research profiling applications</strong> describing contributions to diverse types of scholarly outputs.</p></li>
+<li><p><strong>Research data management platforms</strong> detailing contributions to data objects they manage.</p></li>
+<li><p><strong>Data repositories</strong> capturing contributions to cataloged data sets.</p></li>
+<li><p><strong>Software development platforms</strong> capturing contributions to code and other software artifacts.</p></li>
+</ul>
+<p>In these contexts, the model can support the <strong>collection</strong>, <strong>provision</strong>, and <strong>exchange</strong> of detailed contribution metadata, <strong>display</strong> of this metadata to system users, and the ability to perform precise contribution-related <strong>queries</strong> and <strong>computational analyses</strong>.</p>
+</div>
+<div class="section" id="data-examples">
+<h2>Data Examples<a class="headerlink" href="#data-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>1. An Author Contribution to a Journal Article</strong></p>
+<p>This simple example includes minimal metadata describing one author’s contribution to the publication of a <a class="reference external" href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006186#authcontrib">journal article</a>, structured according to the CAM specification. The record describes only the role the agent played, and the organizational context in which the contribution was made.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.1371/journal.pgen.1006186&quot;</span><span class="p">,</span> <span class="c1"># the Artifact (a published journal article)</span>
+<span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Artifact&quot;</span><span class="p">,</span>
+<span class="s2">&quot;artifactType&quot;</span><span class="p">:</span> <span class="s2">&quot;wd:Q18918145&quot;</span> <span class="p">(</span><span class="n">journal</span> <span class="n">article</span><span class="p">),</span>
+<span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Epistatic Gene-Based Interaction Analyses for Glaucoma in eMERGE and NEIGHBOR Consortium&quot;</span><span class="p">,</span>
+<span class="s2">&quot;dateCreated&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-13&quot;</span><span class="p">,</span>
+<span class="s2">&quot;qualifiedContribution&quot;</span><span class="p">:</span> <span class="p">[</span>    <span class="c1"># the Contribution</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ex:contribution001&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;cro:Contribution&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hadAgent&quot;</span><span class="p">:</span>    <span class="c1"># the Agent</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ex:agent001&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Agent&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Cathy McCarty&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;externalId&quot;</span><span class="p">:</span> <span class="n">orcid</span><span class="p">:</span><span class="mi">1234</span><span class="o">-</span><span class="mi">5678</span><span class="o">-</span><span class="n">XXXX</span>
+                <span class="p">},</span>
+        <span class="s2">&quot;hadRole&quot;</span><span class="p">:</span>   <span class="c1"># the specific role they played</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;cro:0000055&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;study design role&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;system&quot;</span><span class="p">:</span> <span class="s2">&quot;Contribution Role Ontology&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;systemURL&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.com/obo/cro.owl&quot;</span>
+                <span class="p">},</span>
+        <span class="s2">&quot;organizationalContext&quot;</span><span class="p">:</span>   <span class="c1"># an organization they acted within when making the contribution</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ex:org001&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Organization&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;eMERGE Network&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://emerge.mc.vanderbilt.edu/&quot;</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>2. A Curator Contribution to a CIViC Database Record</strong></p>
+<p>This richer example includes more extensive contribution metadata from <a class="reference external" href="https://civicdb.org/api/assertions/10">this variant interpretation record</a> in the CIViC Knowledgebase, structured according to the CAM specification. The record includes details of <strong>when</strong>, <strong>how</strong>, <strong>where</strong>, and <strong>in what context</strong> contributions were made by four agents during the life-cycle of this curated record. The example below captures just one of these contributions, but the <a class="reference external" href="https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml">complete example with all four is here</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;civic:AID10&quot;</span><span class="p">,</span>  <span class="c1"># the Artifact (a curated variant interpretation record)</span>
+<span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Artifact&quot;</span><span class="p">,</span>
+<span class="s2">&quot;artifactType&quot;</span><span class="p">:</span> <span class="s2">&quot;wd:Q49848&quot;</span><span class="p">,</span>
+<span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;AID10&quot;</span><span class="p">,</span>
+<span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Vemurafenib and cobimetinib combination is an...&quot;</span><span class="p">,</span>
+<span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://civicdb.org/api/assertions/10&quot;</span><span class="p">,</span>
+<span class="s2">&quot;dateCreated&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-11-08T16:42:21.820Z&quot;</span><span class="p">,</span>
+<span class="s2">&quot;qualifiedContribution&quot;</span><span class="p">:</span> <span class="p">[</span>   <span class="c1"># the Contribution</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ex:contribution001&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;cro:Contribution&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-11-01T18:54:05.924Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hadAgent&quot;</span><span class="p">:</span>    <span class="c1"># the Agent</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;civic:110&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Agent&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;externalId&quot;</span><span class="p">:</span> <span class="s2">&quot;orcid:0000-0001-9815-2288&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Arpad Danos&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;_display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;arpaddanos&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;_expertise&quot;</span><span class="p">:</span> <span class="s2">&quot;Research Scientist&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;_orgRole&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span>
+                <span class="p">},</span>
+        <span class="s2">&quot;hadRole&quot;</span><span class="p">:</span> <span class="p">[</span>    <span class="c1"># here multiple roles are captured in a single Contribution object</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;cro:0000XXX&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;creator role&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;system&quot;</span><span class="p">:</span> <span class="s2">&quot;Contribution Role Ontology&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;systemURL&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.com/obo/cro.owl&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;cro:0000105&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;submitter role&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;system&quot;</span><span class="p">:</span> <span class="s2">&quot;Contribution Role Ontology&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;systemURL&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.com/obo/cro.owl&quot;</span>
+                <span class="p">}</span>
+           <span class="p">],</span>
+        <span class="s2">&quot;organizationalContext&quot;</span><span class="p">:</span>   <span class="c1"># an Organization they acted within when making the Contribution</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;wd:Q27612411&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Organization&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Clinical Interpretation of Variants in Cancer (CIViC)&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://civicdb.org/&quot;</span>
+                <span class="p">},</span>
+        <span class="s2">&quot;wasSpecifiedBy&quot;</span><span class="p">:</span>    <span class="c1"># a Method that guided how the contribution was made</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.1101/700179&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Method&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer&quot;</span>
+                <span class="p">},</span>
+        <span class="s2">&quot;occurredAt&quot;</span><span class="p">:</span>   <span class="c1"># the Location where the contribution was made</span>
+                <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;civic:214&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;camo:Location&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;United States&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;externalID&quot;</span><span class="p">:</span> <span class="s2">&quot;iso:US&quot;</span>
+                <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>How concepts such as <strong>Organizations</strong>, <strong>Methods</strong>, and <strong>Locations</strong> are represented is not in scope for the CAM, and is left to implementations to decide.  In the CIViC example above, a structured json object is created to represent these concepts and a few attributes of each. But implementations could choose to capture organization, method, and location values as simple strings if desired, for a much more concise representation. For example:</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;organizationalContext&quot;</span><span class="p">:</span>  <span class="s2">&quot;Clinical Interpretation of Variants in Cancer (CIViC)&quot;</span><span class="p">,</span>
+
+<span class="s2">&quot;wasSpecifiedBy&quot;</span><span class="p">:</span> <span class="s2">&quot;The CIViC SoP for curation and clinical interpretation of variants in cancer&quot;</span><span class="p">,</span>
+
+<span class="s2">&quot;occurredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;United States&quot;</span>
+</pre></div>
+</div>
+<p><strong>Additional Notes:</strong></p>
+<ul class="simple">
+<li><p>Expansions of identifier pefixes in the data above will be provided in a <a class="reference internal" href="schema/json_schema.html#ld-context"><span class="std std-ref">JSON-LD context file</span></a>.</p></li>
+<li><p>Attributes preceded by an underscore (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;_expertise&quot;</span></code>) represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.’</p></li>
+<li><p>Additional data examples will be provided as part of the <a class="reference internal" href="implementation_guide/index.html#implementation-guide"><span class="std std-ref">Implementation Guide</span></a>.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="info_model/index.html" class="btn btn-neutral float-right" title="Information Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the Contributor Attribution Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CD2H Contribution Model Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

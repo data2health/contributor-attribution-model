@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Example Scenario &mdash; Contributor Attribution Model  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Contributor Attribution Model
+          
+
+          
+            
+            <img src="../_static/cd2h_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Site Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#background-and-motivation">Background and Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#specification-components">Specification Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#modeling-scope">Modeling Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#relationship-to-prov">Relationship to PROV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#application-use-cases">Application Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#data-examples">Data Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../info_model/index.html">Information Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../info_model/classes/index.html">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/classes/artifact.html">Artifact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/classes/contribution.html">Contribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/classes/agent.html">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/classes/agent.html#id2">Person</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/classes/agent.html#id4">Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/classes/agent.html#id6">Computational Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/classes/placeholders.html">Placeholder Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/classes/placeholders.html#id1">Location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/classes/placeholders.html#id2">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/classes/placeholders.html#id3">Funding Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../info_model/data_types.html">Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/data_types.html#simple-data-types">Simple Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#id1">string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#id2">url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#code">code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#identifier">identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#id6">class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#id7">date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#id8">dateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#id10">duration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/data_types.html#complex-data-types">Complex Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../info_model/data_types.html#coding">Coding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../info_model/value_sets.html">Value Sets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/value_sets.html#contribution-role-value-set">Contribution Role Value Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../info_model/value_sets.html#artifact-type-value-set">Artifact Type Value Set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../schema/index.html">Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../schema/json_schema.html">JSON Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../schema/json_schema.html#ld-context">LD-Context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ontologies.html">Supporting Ontologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ontologies.html#contribution-model-ontology">Contribution Model Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ontologies.html#contribution-role-ontology">Contribution Role Ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tsv_format.html">Curation Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_and_services.html">Code and Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Implementation Guide</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/index.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendices/relationships_to_standards.html">I. Relationship to Existing Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/relationships_to_standards.html#w3c-prov">W3C PROV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/relationships_to_standards.html#fhir-provenance-resource">FHIR ‘Provenance’ Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/relationships_to_standards.html#vivo-openrif">VIVO / openRIF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Contributor Attribution Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Example Scenario</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/implementation_guide/example_scenario.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="example-scenario">
+<span id="id1"></span><h1>Example Scenario<a class="headerlink" href="#example-scenario" title="Permalink to this headline">¶</a></h1>
+<p>Coming soon …</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CD2H Contribution Model Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

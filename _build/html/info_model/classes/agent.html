@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Agent &mdash; Contributor Attribution Model  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Placeholder Classes" href="placeholders.html" />
+    <link rel="prev" title="Contribution" href="contribution.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Contributor Attribution Model
+          
+
+          
+            
+            <img src="../../_static/cd2h_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Site Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#background-and-motivation">Background and Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#specification-components">Specification Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#modeling-scope">Modeling Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#relationship-to-prov">Relationship to PROV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#application-use-cases">Application Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#data-examples">Data Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Information Model</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="artifact.html">Artifact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contribution.html">Contribution</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Person</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Computational Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="placeholders.html">Placeholder Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="placeholders.html#id1">Location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="placeholders.html#id2">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="placeholders.html#id3">Funding Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types.html">Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_types.html#simple-data-types">Simple Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#id1">string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#id2">url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#code">code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#identifier">identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#id6">class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#id7">date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#id8">dateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#id10">duration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_types.html#complex-data-types">Complex Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_types.html#coding">Coding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../value_sets.html">Value Sets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../value_sets.html#contribution-role-value-set">Contribution Role Value Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../value_sets.html#artifact-type-value-set">Artifact Type Value Set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../schema/index.html">Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../schema/json_schema.html">JSON Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../schema/json_schema.html#ld-context">LD-Context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ontologies.html">Supporting Ontologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ontologies.html#contribution-model-ontology">Contribution Model Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ontologies.html#contribution-role-ontology">Contribution Role Ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tsv_format.html">Curation Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_and_services.html">Code and Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../implementation_guide/index.html">Implementation Guide</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendices/index.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendices/relationships_to_standards.html">I. Relationship to Existing Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../appendices/relationships_to_standards.html#w3c-prov">W3C PROV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../appendices/relationships_to_standards.html#fhir-provenance-resource">FHIR ‘Provenance’ Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../appendices/relationships_to_standards.html#vivo-openrif">VIVO / openRIF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Contributor Attribution Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Information Model</a> &raquo;</li>
+        
+          <li><a href="index.html">Classes</a> &raquo;</li>
+        
+      <li>Agent</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/info_model/classes/agent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="agent">
+<span id="id1"></span><h1>Agent<a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h1>
+<p><strong>Definition</strong>: An autonomous actor that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent’s activity.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>Agents make contributions to Artifacts. An agent can be an individual Person, an Organization of multiple individuals acting together, or a Computational Agent such as a software program or algorithm.</p></li>
+<li><p>Agents can belong to Organizations, and act on behalf or in the context of an Organization when contributing to an Artifact. For example, curators generating these <a class="reference external" href="https://erepo.clinicalgenome.org/evrepo/ui/classifications?matchMode=exact&amp;gene=PTEN">variant pathogenicity interpretations</a> do so in the context of the <a class="reference external" href="https://www.clinicalgenome.org/">ClinGen organization</a>, which provides administrative, technical, and funding support for their contributions.</p></li>
+<li><p>The CAM model for Agent is minimal - providing only a few generic attributes. Future versions may provide more detailed specifications, but at present it is up to implementations to extend this base model as needed to meet their use cases.</p></li>
+</ul>
+<p><strong>Information Model:</strong></p>
+<table class="colwidths-given docutils align-left">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 5%" />
+<col style="width: 10%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Cardinality</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Data Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>id</strong></p></td>
+<td><p>A unique string that identifies the artifact.</p></td>
+<td><p>1..1</p></td>
+<td><p>MUST</p></td>
+<td><p><a class="reference internal" href="../data_types.html#identifier"><span class="std std-ref">identifier</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>type</strong></p></td>
+<td><p>The high-level class to which the agent belongs (‘Person’, ‘Organization’, or ‘Computational Agent’).</p></td>
+<td><p>1..1</p></td>
+<td><p>MUST</p></td>
+<td><p><a class="reference internal" href="../data_types.html#class"><span class="std std-ref">class</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>label</strong></p></td>
+<td><p>A free-text name for the artifact.</p></td>
+<td><p>0..1</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="../data_types.html#string"><span class="std std-ref">string</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>description</strong></p></td>
+<td><p>A free-text description of the artifact.</p></td>
+<td><p>0..1</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="../data_types.html#string"><span class="std std-ref">string</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>externalID</strong></p></td>
+<td><p>Additional identifier(s) for the agent that come from an external system or authority.</p></td>
+<td><p>0..m</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="../data_types.html#identifier"><span class="std std-ref">identifier</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>url</strong></p></td>
+<td><p>A URL where information about the Agent can be found.</p></td>
+<td><p>0..m</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="../data_types.html#url"><span class="std std-ref">url</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>qualified Contribution</strong></p></td>
+<td><p>A particular contribution made by the agent to an artifact.</p></td>
+<td><p>0..m</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="contribution.html#contribution"><span class="std std-ref">Contribution</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>.</p>
+<p><strong>Implementation Notes:</strong></p>
+<ul>
+<li><p><strong>Agent Instances</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Agent is an <strong>‘abstract class’</strong>, and therefore SHOULD NOT be directly instantiated. A concrete subclass (<a class="reference internal" href="#person"><span class="std std-ref">Person</span></a>, <a class="reference internal" href="#organization"><span class="std std-ref">Organization</span></a>, or <a class="reference internal" href="#computational-agent"><span class="std std-ref">Computational Agent</span></a>) SHOULD be selected to represent any agent in the data. The attributes defined for the abstract Agent are inherited and extended by its two child classes.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Extensions to the Agent Class</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Implementations requiring more than the minimal attributes provided for describing agents MAY extend the model as needed, following the recommendations in the <a class="reference internal" href="../../implementation_guide/index.html#implementation-guide"><span class="std std-ref">Implementation Guide</span></a>. Extesnion may involve creating additional attributes for exsiting classes, and/or defineing additional subtypes. We recommend use of community  standards where possible for describing agents (e.g. <a class="reference external" href="http://www.foaf-project.org/">FOAF</a>), to facilitate data sharing and interoperability.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="section" id="id2">
+<h2>Person<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Definition</strong>: A human being.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>Persons are human beings with agency who contribute to artifacts.</p></li>
+<li><p>Person is a <strong>concrete sublass of Agent</strong>. It can be instantiated in the data, and inherits from its abstract parent Agent class.</p></li>
+<li><p>At present the CAM does not define additional person-specific attributes - preferring a minimal but extensible model that allows implementation control over how Persons are represented.</p></li>
+</ul>
+<p><strong>Information Model:</strong></p>
+<ul class="simple">
+<li><p>This class inherits from the <a class="reference internal" href="#agent"><span class="std std-ref">Agent</span></a> class defined above, and does not define additional attributes.</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>In the research domain, examples may include an individual researcher, teacher, curator, administrator, technician, …</p></li>
+</ul>
+<p><strong>Implementation Notes:</strong></p>
+<ul>
+<li><p><strong>Person Identifiers</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Identifiers for Persons SHOULD come from an open and authoritative provider. <a class="reference external" href="https://orcid.org/">ORCIDs</a> are becoming a de facto standard in this space, and are strongly recommended. But other identifier systems/providers exist (e.g. <a class="reference external" href="http://www.researcherid.com/">ResearcherID</a>, <a class="reference external" href="http://www.isni.org/">ISNI</a>).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Person Contributions in Organizations</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the person making a contribution is acting as a member of an organization, this MAY be captured using the <em>organizationalContext</em> attribute of the Contribution class. Alternatively, the Organization itself may be indicated as the agent making the contribution.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Extensions to the Person Class</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>As noted above, this minimal Person model is meant to be extended with additional attributes by implementations as needed to suit their requirements.  Examples of information that may be useful include given and family name, date of birth, employer, organizational memberships, professional titles, etc.  We recommend looking to community standards such as <a class="reference external" href="http://www.foaf-project.org/">FOAF</a> to provide modeling constructs here, to facilitate data sharing and interoperability.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Membership in Organizations:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The details of a Person’s membership in an Organization (dates they were active, roles/status they held, etc.) could support advanced queries relating contributions to organizational membership (e.g. “Find all contributions made in 2014 by persons who were members of organization X that year”).  Details about organizational membership are not yet represented in the CAM, but this capability may be added in the future, and for now implementations can define their own models to support these use cases.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>Organization<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p><strong>Definition:</strong> A group of agents (typically persons) structured and managed to achieve a common goal.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>Organization is a <strong>concrete sublass of Agent</strong>. It can be instantiated in the data, and inherits from its abstract parent Agent class. But at present the CAM does not define additional organization-specific attributes.</p></li>
+<li><p>Organizations as defined here may include and group of individuals organized around a shared task or goal, including companies, academic interest groups, consortia, charitable foundations, formal research collaborations.  A group does not have to be formally recognized as an organization to be treated as such in the CDM.</p></li>
+<li><p>An organization can collectively be credited as making a contribution when it directly or indirectly supports the creation or modification of an artifact, e.g. through funding, defining, directing the work, and/or through its members performing the work.</p></li>
+</ul>
+<p><strong>Information Model:</strong></p>
+<ul class="simple">
+<li><p>This class inherits from the <a class="reference internal" href="#agent"><span class="std std-ref">Agent</span></a> class defined above, and does not define additional attributes.</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>Scientific consortia such as the <a class="reference external" href="https://www.ga4gh.org/">Global Alliance for Genomics and Health</a> and <a class="reference external" href="https://clinicalgenome.org/">ClinGen</a>.</p></li>
+<li><p>Businesses/companies such as the publisher <a class="reference external" href="https://www.elsevier.com/">Elsevier</a></p></li>
+<li><p>A medical non-profit organization scuch as the <a class="reference external" href="https://www2.heart.org">American Heart Association</a></p></li>
+<li><p>A government agency) such as the <a class="reference external" href="https://www.cdc.gov/">Centers for Disease Control</a></p></li>
+<li><p>A philanthropic fraternity such as <a class="reference external" href="https://www.shrinersinternational.org/">Shriners International</a></p></li>
+<li><p>A group of students assigned to complete a class project</p></li>
+</ul>
+<p><strong>Implementation Notes:</strong></p>
+<ul>
+<li><p><strong>Capturing Organization Contributions:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Contributions of an organization to an artifact can be captured in two ways: <strong>(1) Directly</strong> as the asserted agent in a contribution, in cases where it reflects the collective effort of a group, or it is not important to capture the roles or actions of individual members acting on behalf of an organization; or <strong>(2) Indirectly</strong> as an organization on whose behalf an individual member’s contribution was performed (using the <em>organizationalContext</em> attribute of the Contribution class).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Extensions to the Organization Class:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>As noted above, this minimal Organization model is meant to be extended with additional attributes by implementations as needed to suit their requirements. We recommend looking to community standards such as <a class="reference external" href="http://www.foaf-project.org/">FOAF</a> to provide modeling constructs here, to facilitate data sharing and interoperability.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>Computational Agent<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p><strong>Definition:</strong> A software program or algorithm that can autonomously execute tasks to achieve a specified goal.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>A software program need not conceive of or initiate the task on its own to be considered an agent - it must only be capable of autonomously executing a programmed task.</p></li>
+</ul>
+<p><strong>Information Model:</strong></p>
+<ul class="simple">
+<li><p>This class inherits from the <a class="reference internal" href="#agent"><span class="std std-ref">Agent</span></a> class defined above, and does not define additional attributes.</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>An <a class="reference external" href="https://en.wikipedia.org/wiki/Algorithmic_art">algorist</a> (computer algorithm designed to generate art)</p></li>
+<li><p>An algorithm that automatically generates an ontology by mining text for Wikipedia</p></li>
+</ul>
+<p><strong>Implementation Notes:</strong></p>
+<blockquote>
+<div><ul>
+<li><p><strong>Inferring ‘Transitive Credit’ to Software Creators</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>As man-made entities, computational agents can be considered Artifacts, and contributions to them can be captured using the CAM. When this is done, ‘transitive credit’ can be inferred for software creators for Artifacts the software produces.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="placeholders.html" class="btn btn-neutral float-right" title="Placeholder Classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contribution.html" class="btn btn-neutral float-left" title="Contribution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CD2H Contribution Model Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

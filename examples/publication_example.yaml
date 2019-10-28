@@ -13,6 +13,7 @@ The example below shows metadata describing one author's contribution to the pub
         - id: ex:agent001
           type: camo:Agent
           label: "Cathy McCarty"
+          externalId: orcid:1234-5678-XXXX
       hadRole: 
         - code: cro:0000055 
           label: "study design role"

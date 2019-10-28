@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Types &mdash; Contributor Attribution Model  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Value Sets" href="value_sets.html" />
+    <link rel="prev" title="Placeholder Classes" href="classes/placeholders.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Contributor Attribution Model
+          
+
+          
+            
+            <img src="../_static/cd2h_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Site Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#background-and-motivation">Background and Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#specification-components">Specification Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#modeling-scope">Modeling Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#relationship-to-prov">Relationship to PROV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#application-use-cases">Application Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#data-examples">Data Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Information Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classes/index.html">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classes/artifact.html">Artifact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classes/contribution.html">Contribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classes/agent.html">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classes/agent.html#id2">Person</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/agent.html#id4">Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/agent.html#id6">Computational Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="classes/placeholders.html">Placeholder Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classes/placeholders.html#id1">Location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/placeholders.html#id2">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/placeholders.html#id3">Funding Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simple-data-types">Simple Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code">code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identifier">identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">dateTime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">duration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#complex-data-types">Complex Data Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#coding">Coding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="value_sets.html">Value Sets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="value_sets.html#contribution-role-value-set">Contribution Role Value Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="value_sets.html#artifact-type-value-set">Artifact Type Value Set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../schema/index.html">Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../schema/json_schema.html">JSON Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../schema/json_schema.html#ld-context">LD-Context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ontologies.html">Supporting Ontologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ontologies.html#contribution-model-ontology">Contribution Model Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ontologies.html#contribution-role-ontology">Contribution Role Ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tsv_format.html">Curation Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_and_services.html">Code and Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../implementation_guide/index.html">Implementation Guide</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/index.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendices/relationships_to_standards.html">I. Relationship to Existing Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/relationships_to_standards.html#w3c-prov">W3C PROV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/relationships_to_standards.html#fhir-provenance-resource">FHIR ‘Provenance’ Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendices/relationships_to_standards.html#vivo-openrif">VIVO / openRIF</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Contributor Attribution Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Information Model</a> &raquo;</li>
+        
+      <li>Data Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/info_model/data_types.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-types">
+<span id="data-type"></span><h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h1>
+<p>‘Data type’ specifications define more fundamental, general-purpose constructs that provide structure and semantics to data. In addition to a set of classes, the CAM provides a handful of simple and complex data types that are used to specify the type of value that a given attribute may take.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#simple-data-types">Simple Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identifier">identifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">dateTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">duration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#complex-data-types">Complex Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coding">Coding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="simple-data-types">
+<h2>Simple Data Types<a class="headerlink" href="#simple-data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>string<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> a sequence of Unicode characters</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>The string data type represents free-text that is not constrained to some code set or associated with some semantic interpretation</p></li>
+<li><p>It is the most generic form of free-text literal in our model, and conceptually subsumes string-based data types with more constrained interpretations (e.g. code, identifier, url)   identifiers)</p></li>
+<li><p>It is most often used to capture names and free-text descriptions of entities in the model or data.</p></li>
+</ul>
+<p><strong>Examples of attributes taking strings as values</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;author role&quot;</span>
+<span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Semantic Web for Dummies&quot;</span>
+<span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A cell line derived from cervical tumor cells of a cancer patient&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>url<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> A Uniform Resource Locator (RFC 1738) representing a web address where a resource can be found or information about the resource discovered. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>Used in place of a plain string datatype when a resolvable web address for a resource is desired.</p></li>
+<li><p>URLs with an http{s} protocol are preferred where available.</p></li>
+</ul>
+<p><strong>Examples of attributes taking a url as values</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;systemURL&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/cro.owl</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code">
+<span id="id3"></span><h3>code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> a string value that is taken from a set of controlled strings defined by some system or authority</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>A code can be opaque (e.g. <code class="docutils literal notranslate"><span class="pre">CRO:0000001</span></code>, <code class="docutils literal notranslate"><span class="pre">90210</span></code>) or convey meaning (e.g. <code class="docutils literal notranslate"><span class="pre">author</span></code>, <code class="docutils literal notranslate"><span class="pre">AFR</span></code>, <code class="docutils literal notranslate"><span class="pre">PDX</span></code>).</p></li>
+<li><p>Codes are used primarily within a <a class="reference internal" href="#coding"><span class="std std-ref">Coding</span></a> object, where they hold the core value of the Coding. Codings and codes are used in Value Sets bound to selected attributes to control data entry.</p></li>
+<li><p>Codes are used primarily within a <a class="reference internal" href="#coding"><span class="std std-ref">Coding</span></a> object, where they hold the core value of the Coding. Codings and codes are used in Value Sets bound to selected attributes to control data entry.</p></li>
+<li><p>Whenever possible a code should be represented as a URL or prefixed identifier that indicates the code system that provided it. If this is not possible, the code system can be captured in the “system” attribute of the coding object holding the code.</p></li>
+</ul>
+<p><strong>Examples of data structures using codes as values:</strong></p>
+<blockquote>
+<div><p>A ‘Coding’ object, in which the ‘code’ element holds the code “CRO:0000001”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;realizedRole”: {
+   “system”: “http://purl.obolibrary.org/obo/cro.owl”
+   “systemVersion”: 1.0,
+   “code”: “CRO:0000001”
+   “label”: “author role”
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="identifier">
+<span id="id4"></span><h3>identifier<a class="headerlink" href="#identifier" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> A string that uniquely identifies a specific instance of an object in a dataset or document.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>An identifier refers to exactly one instance, but a given instance in the data may be associated with more than one identifier.</p></li>
+<li><p>Identifiers SHOULD be globally unique, persistent, and machine-resolvable.</p></li>
+<li><p>Use of the <a class="reference external" href="https://www.w3.org/TR/curie/">W3C Compact URI (CURIE)</a> syntax to structure identifiers is one way to meet these criteria. CURIEs consist of prefix and reference components that correspond to a namespace and local identifier within that namespace, respectively, and are deterministically expandable into a full URI.</p></li>
+<li><p>It is strongly RECOMMENDED, but not required, that identifiers are represented using CURIE or URI syntax. General guidelines and identifier best practices, including use of CURIEs, are well described <a class="reference external" href="https://doi.org/10.1371/journal.pbio.2001414">here</a> and <a class="reference external" href="https://doi.org/10.1038/sdata.2018.29">here</a>.</p></li>
+<li><p>Instance identifiers can be generated de novo by a system creating data, or borrowed from external systems/authorities that mint identifiers (e.g. databases, registries, ontologies). For example, a Person instance can be assigned a de novo internal identifier by the system generating the record (e.g. ex:12345), or the system can choose to use an established ORCID for that person (e.g. <code class="docutils literal notranslate"><span class="pre">orcid:0000-0002-1048-5019</span></code>). For de novo identifiers, we strongly recommend the use of a services such as <a class="reference external" href="https://w3id.org/">w3id</a> to enable web resolution (even if simply resolving to an informal document providing minimal metadata about each identifier).</p></li>
+<li><p>If a system wishes to capture both an internal and external identifiers, the internal one should be captured in the <em>identifier</em> attribute, and the <em>externalId</em> attribute can be used to record one or more established identifiers from community authorities.</p></li>
+</ul>
+<p><strong>Examples of attributes taking identifiers as values</strong>:</p>
+<p>CURIEs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;identifier&quot;: “orcid:0000-0002-1048-5019”
+&quot;identifier&quot;: “pmid:123456”
+&quot;identifier&quot;: “ga4gh:VX60NSGLem4X3Q8gnOSx48pZDCmJVSUk”
+&quot;externalId&quot;: “doi:10.1111/2041-210x.12970”
+&quot;externalId&quot;: “IGSN:ECS000004”
+</pre></div>
+</div>
+<p>Full URIs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;identifier&quot;: &quot;http://doi.org/10.1111/2041-210x.12970&quot;
+&quot;identifier&quot;: “http://n2t.net/ark:/65665/3f09e18cb-fb47-4ea8-ae3b-694a89ea8ff4”
+</pre></div>
+</div>
+<p>Non-CURIE/URI Identifiers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;identifier&quot;: “USNMENT00945454”
+&quot;identifier&quot;: &quot;MGI41353&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>class<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> a string value representing the class of objects to which an instance belongs.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>This string MUST be the name of a concrete class from the base CAM specification (i.e. one of Artifact, Contribution, Person, Organization, Computational Agent, Location, Method, Funding Source), or a specialization of such a class in an extension defined by a particular implementation.</p></li>
+<li><p>Note that when an attribute bound to a value set takes an ontology class (e.g. a CRO term in the <a class="reference internal" href="value_sets.html#contribution-role"><span class="std std-ref">Contribution Role Value Set</span></a>), the <a class="reference internal" href="#coding"><span class="std std-ref">Coding</span></a> data type MUST be used - as the class data type is reserved for specifying the type of proper instances in a dataset.</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>date<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> specifies a date comprised of a year, month, and day, following the form “YYYY-MM-DD”, with an optional time zone parameter.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>The date data type is used when precision down to a specific day is required, but not a specific time of day.</p></li>
+<li><p>Conventions for representing dates defined here are based on the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> standard.</p></li>
+<li><p>A time zone can be indicated by appending a “Z” to specify UTC time (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;1978-01-20Z&quot;</span></code>), or specifying an offset from UTC time by adding positive or negative time after the date (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;1978-01-20+5:00&quot;</span></code>)</p></li>
+</ul>
+<p><strong>Examples of attributes taking dates values</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-04-12TZ&quot;</span>
+<span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1998-12-18T+06:00&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>dateTime<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> specifies a date and time of day comprised of a year, month, day, hour, minute, and second, following the form “YYYY-MM-DDThh:mm:ss”</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>The dateTime data type is used when precision down to a specific time of day is required.</p></li>
+<li><p>Conventions for representing date + time defined here are based on the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> standard.</p></li>
+<li><p>Hours of the day should use 24-hour time (e.g. 2PM = 14:00:00)</p></li>
+<li><p>A time zone can be specified as described for ‘dates’ above, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;1978-01-20T05:15:00Z</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;1978-01-20T05:15:00+5:00&quot;</span></code>.</p></li>
+<li><p>If precision down to time of day is not possible or necessary, the hours, minutes, and seconds must still be provided due to schema constraints, but can all be set to “00” and ignored at the instruction of the message sender.</p></li>
+</ul>
+<p><strong>Examples of attributes taking dateTime values</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-04-12T11:05:25+08:00&quot;</span>
+<span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2004-09-05T00:00:00Z&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>duration<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> specifies a length of time, using the form “PnYnMnDTnHnMnS”</p>
+<p><strong>Description and Use:</strong></p>
+<ul>
+<li><p>The duration data type should be used to directly assert the length of time a contribution took to perform.</p></li>
+<li><p>Conventions for representing duration defined here are based on the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> standard.</p></li>
+<li><p>A ‘P’ prefix and at least one of the temporal components below is required in a duration value:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘nY’ indicates a number of years</p></li>
+<li><p>‘nM’ indicates a number of months</p></li>
+<li><p>‘nD’ indicates a number of days</p></li>
+<li><p>‘T’ indicates the start of a time section (required to specify precision down to hours, minutes, or seconds)</p></li>
+<li><p>‘nH’ indicates a number of hours</p></li>
+<li><p>‘nM’ indicates a number of minutes</p></li>
+<li><p>‘nS’ indicates a number of seconds</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Examples of attributes taking duration values</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;P8Y&quot;</span>  <span class="p">(</span><span class="mi">8</span> <span class="n">years</span><span class="p">)</span>
+<span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;P8Y4M15D&quot;</span>  <span class="p">(</span><span class="mi">8</span> <span class="n">years</span> <span class="mi">4</span> <span class="n">months</span> <span class="mi">15</span> <span class="n">days</span><span class="p">)</span>
+<span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;P8Y4M15DT2H6M35S&quot;</span>  <span class="p">(</span><span class="mi">8</span> <span class="n">years</span> <span class="mi">4</span> <span class="n">months</span> <span class="mi">15</span> <span class="n">days</span> <span class="mi">2</span> <span class="n">hours</span> <span class="mi">6</span> <span class="n">minutes</span> <span class="mi">35</span> <span class="n">seconds</span><span class="p">)</span>
+<span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;P8Y215D&quot;</span>  <span class="p">(</span><span class="mi">8</span> <span class="n">years</span> <span class="mi">215</span> <span class="n">days</span><span class="p">)</span>
+<span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;PT2H6M35S&quot;</span>  <span class="p">(</span><span class="mi">2</span> <span class="n">hours</span> <span class="mi">6</span> <span class="n">minutes</span> <span class="mi">35</span> <span class="n">seconds</span><span class="p">)</span>
+<span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;PT35S&quot;</span>  <span class="p">(</span><span class="mi">35</span> <span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="complex-data-types">
+<h2>Complex Data Types<a class="headerlink" href="#complex-data-types" title="Permalink to this headline">¶</a></h2>
+<p>In contrast to ‘simple’ data types, ‘complex’ data types specify structured objects with attributes of their own. These objects do not represent primary domain entities, are not ‘identified’ in the data.</p>
+<div class="section" id="coding">
+<span id="id12"></span><h3>Coding<a class="headerlink" href="#coding" title="Permalink to this headline">¶</a></h3>
+<p><strong>Definition:</strong> a structured representation of a <a class="reference internal" href="#code"><span class="std std-ref">code</span></a> from some code system, that includes additional metadata about the code and code system.</p>
+<p><strong>Description and Use:</strong></p>
+<ul class="simple">
+<li><p>The specification for this data type was adapted from the <a class="reference external" href="https://www.hl7.org/fhir/datatypes.html#Coding">FHIR ‘Coding’</a> data type. It provides a structure to include additional metadata about a ‘code’ used to capture data in a dataset - for example, the human-readable name for the code, or the code system from which it came. In this way it differs from the primitive ‘code’ data type, which specifies only a string value representing the code itself.</p></li>
+<li><p>The CAM opts to require a Coding object in places where a value set is bound to an attribute, rather than allowing direct capture of the code alone, as we believe that users will minimally want to see the human-readable name of the code in a message or dataset.</p></li>
+</ul>
+<p><strong>Information Model:</strong></p>
+<table class="colwidths-given docutils align-left">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 5%" />
+<col style="width: 10%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Cardinality</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Data Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>code</strong></p></td>
+<td><p>The value of the code itself.</p></td>
+<td><p>1..1</p></td>
+<td><p>MUST</p></td>
+<td><p><a class="reference internal" href="#code"><span class="std std-ref">code</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>label</strong></p></td>
+<td><p>A human-readable name for the code.</p></td>
+<td><p>0..1</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="#string"><span class="std std-ref">string</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>system</strong></p></td>
+<td><p>The code system where the code is defined.</p></td>
+<td><p>0..1</p></td>
+<td><p>MAY**</p></td>
+<td><p><a class="reference internal" href="#string"><span class="std std-ref">string</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>systemURL</strong></p></td>
+<td><p>A URL where the code system can be found.</p></td>
+<td><p>0..1</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="#url"><span class="std std-ref">url</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>systemVersion</strong></p></td>
+<td><p>The version of the code system.</p></td>
+<td><p>0..1</p></td>
+<td><p>MAY</p></td>
+<td><p><a class="reference internal" href="#string"><span class="std std-ref">string</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id13"><span class="problematic" id="id14">**</span></a>The system attribute is left optional (MAY) under the assumption that most codes will be defined as a URI or prefixed identifier that captures the defining code system, as recommended in the specification for the “code” data type. If this is not the case, the code system MUST be indicated using the system attribute.</p>
+<p><strong>Examples of data structures using Codings as values:</strong></p>
+<blockquote>
+<div><p>A ‘Coding’ object, in which the ‘code’ element holds the code “CRO:0000001”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“realizedRole”: {
+   “system”: “http://purl.obolibrary.org/obo/cro.owl”
+   “systemVersion”: 1.0,
+   “code”: “CRO:0000001”
+   “label”: “author role”
+}
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="value_sets.html" class="btn btn-neutral float-right" title="Value Sets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classes/placeholders.html" class="btn btn-neutral float-left" title="Placeholder Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CD2H Contribution Model Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
