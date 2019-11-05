@@ -4,7 +4,7 @@
 
 - id: civic:AID10
   type: camo:Artifact
-  artifactType: wd:Q49848  # document
+  artifactType: civic:Assertion
   label: "AID10"
   description: "Vemurafenib and cobimetinib combination is an..."
   url: "https://civicdb.org/api/assertions/10"
