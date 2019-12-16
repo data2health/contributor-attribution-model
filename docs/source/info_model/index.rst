@@ -12,7 +12,17 @@ The `Unified Modeling Language <https://www.uml.org/>`_ (UML) diagram in **Figur
 
    **Figure 2:** The UML diagram shows attributes of each core **class**, **relationships** between them, and default **cardinality constraints** and **data types** for data collection.  Specific implementations can refine and extend the model with to suit their domain and use case, as detailed in the :ref:`Implementation Guide <implementation-guide>`. The *italic* font of the Agent class indicates it is an 'abstract class' that is intantiated only through its subtypes.
 
+.. _index1:
 
+Links below point to detailed descriptions of each component in the model.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Information Model Components
+   
+   classes/index
+   data_types
+   value_sets
 
 .. _terms-typo-conventions:
 
@@ -37,12 +47,3 @@ The `Unified Modeling Language <https://www.uml.org/>`_ (UML) diagram in **Figur
 
 
 
-.. _index1:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: IM Content Index
-   
-   classes/index
-   data_types
-   value_sets

@@ -1,7 +1,7 @@
 Overview
 !!!!!!!!
 
-The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped data model** for representing information about contributions made to research-related artifacts - for example when, why, and how a curator contributed to a gene annotation record. This core model is intended to be **used as a modular component of broader data models** that support data collection and curation systems, to facilitate reliable and consistent exchange of computable contribution metadata. Additional components of the CAM specification support implementation of the model, data collection, and ontology-based query and analysis of contribution metadata. 
+The **Contributor Attribution Model (CAM) Specification** is a standard developed within the `Center for Data to Health <https://github.com/data2health>`_ (CD2H) `Architecting Attribution <https://github.com/data2health/architecting_attribution>`_ project. It provides a **simple and tightly scoped data model** for representing information about contributions made to research-related artifacts - for example when, why, and how a researcher contributd to a publication, or a curator contributed to a gene annotation record. This core model is intended to be **used as a modular component of larger data models** that drive data collection and curation systems. Additional components of the CAM specification support implementation of the model, data collection using the model, and ontology-based query and analysis of contribution metadata. 
 
 Background and Motivation
 @@@@@@@@@@@@@@@@@@@@@@@@@
@@ -30,16 +30,16 @@ The scope of the Contributor Attribution Model is limited to representing the na
 .. figure:: images/introduction_model.png
    :align: center
 
-   **Figure 1**: Definition of core classes and relationships in the CAM. A structured representation of each class can be found in the :ref:`Information Model<information-model>`, and a formal specification provided by a :ref:`JSON schema <json-schema>`.
+   **Figure 1**: Definition of core classes and relationships in the CAM. A detailed representation of each class can be found in the :ref:`Information Model<information-model>`, and a formal specification provided by a :ref:`JSON schema <json-schema>`.
 
 This three object structure is intended to be used as a **module** in the context of a larger data model that captures the complete semantics of a given domain or use case. Implementations can refine or extend the CAM in different ways to suit their specific domain and use case, as described in more detail in the :ref:`implementation-guide`. 
 
 
 Relationship to PROV
 @@@@@@@@@@@@@@@@@@@@
-The CAM is based on a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers contributor attribution, but has been tailored to fit our use case more directly. The CAM was developed independently from PROV due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented it from meeting our primary requirement for as simple and concise a model as necessary. But ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension/profile of PROV.  
+The scoep of the CAM oerlaps with a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers contributor attribution, but has been tailored to fit our use case more directly. While informed by the work of PROV, CAM was developed independently due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented PROV from meeting our primary requirement for as simple and concise a model as possible. However, ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension of PROV.  
 
-Mappings between the CAM and PROV models are provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, which is also based on the PROV model, are also described here.
+Mappings between the CAM and PROV models will be provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, which is also based on the PROV model, will also also be described here.
 
 
 Application Use Cases
