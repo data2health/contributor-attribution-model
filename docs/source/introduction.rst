@@ -46,7 +46,7 @@ Application Use Cases
 @@@@@@@@@@@@@@@@@@@@@
 Applications implementing CAM-based modules may include:
 
-* **Publishers** capturing author contributions to papers.
+* **Publication Databases** capturing author contributions to papers.
 * **Curated knoweldgebases** collecting information on curators contributions to annotation records as they mature through the system.
 * **Research profiling applications** describing contributions to diverse types of scholarly outputs.
 * **Research data management platforms** detailing contributions to data objects they manage.
