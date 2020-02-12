@@ -84,7 +84,7 @@ Person
 **Description and Use:**
   
 * Persons are human beings with agency who contribute to artifacts.
-* Person is a **concrete sublass of Agent**. It can be instantiated in the data, and inherits from its abstract parent Agent class. 
+* Person is a **concrete subclass of Agent**. It can be instantiated in the data, and inherits from its abstract parent Agent class. 
 * At present the CAM does not define additional person-specific attributes - preferring a minimal but extensible model that allows implementation control over how Persons are represented.
 
 **Information Model:**  
@@ -122,8 +122,8 @@ Organization
 
 **Description and Use:**
 
-* Organization is a **concrete sublass of Agent**. It can be instantiated in the data, and inherits from its abstract parent Agent class. But at present the CAM does not define additional organization-specific attributes.
-* Organizations as defined here may include and group of individuals organized around a shared task or goal, including companies, academic interest groups, consortia, charitable foundations, formal research collaborations.  A group does not have to be formally recognized as an organization to be treated as such in the CDM.
+* Organization is a **concrete subclass of Agent**. It can be instantiated in the data, and inherits from its abstract parent Agent class. But at present the CAM does not define additional organization-specific attributes.
+* Organizations as defined here may include and group of individuals organized around a shared task or goal, including companies, academic interest groups, consortia, charitable foundations, formal research collaborations.  A group does not have to be formally recognized as an organization to be treated as such in the CAM.
 * An organization can collectively be credited as making a contribution when it directly or indirectly supports the creation or modification of an artifact, e.g. through funding, defining, directing the work, and/or through its members performing the work.
  
 **Information Model:**

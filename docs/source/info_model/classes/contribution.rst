@@ -30,22 +30,22 @@ Contribution
      - Requirement
      - Data Type	 
    * - **id**
-     - A unique string that identifies the artifact.
+     - A unique string that identifies the contribution.
      - 1..1
      - MUST
      - :ref:`identifier <identifier>`
    * - **type**
-     - The high-level class to which the artifact belongs (always set to 'Contribution').
+     - The high-level class to which the contribution belongs (always set to 'Contribution').
      - 1..1
      - MUST 
      - :ref:`class <class>`
    * - **label**
-     - A free-text name for the artifact.
+     - A free-text name for the contribution.
      - 0..1
      - MAY
      - :ref:`string <string>`
    * - **description**
-     - A free-text description of the artifact.
+     - A free-text description of the contribution.
      - 0..1
      - MAY
      - :ref:`string <string>`
