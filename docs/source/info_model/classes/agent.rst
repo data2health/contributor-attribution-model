@@ -25,7 +25,7 @@ Agent
      - Requirement
      - Data Type	 
    * - **id**
-     - A unique string that identifies the artifact.
+     - A unique string that identifies the agent.
      - 1..1
      - MUST
      - :ref:`identifier <identifier>`
@@ -35,12 +35,12 @@ Agent
      - MUST 
      - :ref:`class <class>`
    * - **label**
-     - A free-text name for the artifact.
+     - A free-text name for the agent.
      - 0..1
      - MAY
      - :ref:`string <string>`
    * - **description**
-     - A free-text description of the artifact.
+     - A free-text description of the agent.
      - 0..1
      - MAY
      - :ref:`string <string>`
@@ -50,7 +50,7 @@ Agent
      - MAY
      - :ref:`identifier <identifier>`
    * - **url**
-     - A URL where information about the Agent can be found.
+     - A URL where information about the agent can be found.
      - 0..m
      - MAY
      - :ref:`url <url>`
