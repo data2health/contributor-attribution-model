@@ -75,14 +75,14 @@ This simple example includes minimal metadata describing one author's contributi
                 {
 		"id": "ex:contribution001",
 		"type": "cro:Contribution",
-		"hadAgent":    # the Agent
+		"contributionMadeBy":    # the Agent
 			{
 			"id": "ex:agent001",
 			"type": "camo:Agent",
 			"label": "Cathy McCarty",
 			 "externalId": orcid:1234-5678-XXXX
 			},
-		"hadRole":   # the specific role they played
+		"realizedRole":   # the specific role they played
 			{
 			"code": "cro:0000055",
 			"label": "study design role",
@@ -118,7 +118,7 @@ This richer example includes more extensive contribution metadata from `this var
 		"id": "ex:contribution001",
 		"type": "cro:Contribution",
 		"endDate": "2018-11-01T18:54:05.924Z",
-		"hadAgent":    # the Agent
+		"contributionMadeBy":    # the Agent
 			{
 			"id": "civic:110",
 			"type": "camo:Agent",
@@ -128,7 +128,7 @@ This richer example includes more extensive contribution metadata from `this var
 			"_expertise": "Research Scientist",
 			"_orgRole": "admin"
 			},
-		"hadRole": [    # here multiple roles are captured in a single Contribution object
+		"realizedRole": [    # here multiple roles are captured in a single Contribution object
 			{
 			"code": "cro:0000XXX",
 			"label": "creator role",
