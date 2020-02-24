@@ -80,7 +80,7 @@ This simple example includes minimal metadata describing one author's contributi
 			"id": "ex:agent001",
 			"type": "camo:Agent",
 			"label": "Cathy McCarty",
-			 "externalId": orcid:1234-5678-XXXX
+			"externalId": orcid:1234-5678-XXXX
 			},
 		"realizedRole":   # the specific role they played
 			{
