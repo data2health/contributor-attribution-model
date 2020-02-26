@@ -95,7 +95,7 @@
     ]
 }
 
- ## -------------------------------------------------------------------------------------------------------##
+## -------------------------------------------------------------------------------------------------------##
 
 # Example 2: PROV Model (Matt's Interpretation)  (*****'s hihglight key features to note)
 
@@ -212,7 +212,7 @@
          }
       }
 
- ## -------------------------------------------------------------------------------------------------------##
+## -------------------------------------------------------------------------------------------------------##
 
 # Example 3: PROV Model (Larry's Interpretation)  (largely same as Matt's interpretation - *****'s hihglight key differences)
 
@@ -316,7 +316,7 @@
           }
        }
 
- ## -------------------------------------------------------------------------------------------------------##
+## -------------------------------------------------------------------------------------------------------##
 
 # Example 4: PROV Model with Extensions to emulate CAM structure ("ex" prefix marks extension elements)
 
@@ -414,4 +414,133 @@
     ]
 }
 
+
+
+# Example 5: CAM Model (same as Example 1), with Affiliaton objects added to represent organizational roles
+#  *****'s below mark areas werhe affiliations are used in the data
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+   {
+    "id": "ag001",
+    "type": "Agent",
+    "externalId": "orcid:0000-0001-9815-2288",
+    "label": "Derek"
+   },
+   {
+    "id": "ag002",
+    "type": "Agent",
+    "externalId": "orcid:0000-0001-1162-6284",
+    "label": "Steven"
+   },
+   {
+    "id": "org001",
+    "type": "Organization",
+    "label": "ENIGMA Consortium",
+    "url": "https://enigmaconsortium.org/"
+   },
+   {
+    "id": "org002",
+    "type": "Organization",
+    "label": "ClinGen Consortium",
+    "url": "https://clinicalgenome.org/"
+   }	
+ ]
+
+# The Affiliations (objects that represent how an agent is affiliated with an organization, including roles/positions held, and dates of affiliation)
+"affiliations":  [
+   {
+    "id": "affiliation001",
+    "type": "Affiliation",
+    "agent": "ag001"           # Derek
+    "organization": "org001"   # ENIGMA
+    "organizationalRole": "expert panel member"
+    "startDate": "2016-04-18"
+    "status": "active"
+   }
+   {
+    "id": "affiliation002",
+    "type": "Affiliation",
+    "agent": "ag001"           # Derek
+    "organization": "org002"   # ClinGen
+    "organizationalRole": "curator"
+    "startDate": "2017-09-22"
+    "status": "active"
+   }
+   {
+    "id": "affiliation003",
+    "type": "Affiliation",
+    "agent": "ag002"           # Steven
+    "organization": "org002"   # ClinGen
+    "organizationalRole": "administrator"
+    "startDate": "2009-12-15"
+    "status": "active"
+    }
+  ] 
+  
+# the Artifact (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "cam.Artifact",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "artifactType": "Variant Interpretation",
+    "dateCreated": "2019-12-20",
+    "dateLastModified": "2020-01-10"
+	
+  # the three Contributions made to the artifact	
+    "qualifiedContribution": [   	
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "cam.Contribution",
+        "startDate": "2019-11-20",       # when the contribution was made
+        "endDate": "2019-11-20",  
+        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionRole":              # what type of contribution
+          {
+            "code": "cro:0000107",
+            "label": "creator role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "wasSpecifiedBy":"2015 ACMG Guidelines"      # the method guiding the contribution 
+        "organizationalContext": "affiliation001"    # ***** an affiliation object describing the agent's organizational role when contribution made
+      }
+		
+      # Dereck's submission of the interpretation
+      {  
+        "id": "contrib002",
+        "type": "cam.Contribution",
+        "startDate": "2019-12-02",       # when the contribution was made
+        "endDate": "2019-12-02",  
+        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionRole":              # what type of contribution
+          {
+            "code": "cro:0000105",
+            "label": "submitter role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "organizationalContext":  "affiliation002"    # ***** an affiliation object describing the agent's organizational role when contribution made
+      }
+		
+      # Steven's acceptance of the interpretation
+      {
+        "id": "contrib003",
+        "type": "cam.Contribution",
+        "startDate": "2020-01-10",      # when the contribution was made
+        "endDate": "2020-01-10",  
+        "madeBy": "ag002",              # who made it (Steven)
+        "contributionRole":             # what type of contribution
+          {
+            "code": "cro:0000104",
+            "label": "acceptor role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          }, 
+        "organizationalContext":  "affiliation003"    # ***** an affiliation object describing the agent's organizational role when contribution made
+        }
+    ]
+}
 
