@@ -1,0 +1,420 @@
+
+
+ 
+# Example 1: CAM Model
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+   {
+    "id": "ag001",
+    "type": "Agent",
+    "externalId": "orcid:0000-0001-9815-2288",
+    "label": "Derek"
+   },
+   {
+     "id": "ag002",
+     "type": "Agent",
+     "externalId": "orcid:0000-0001-1162-6284",
+     "label": "Steven"
+   },
+   {
+     "id": "org001",
+     "type": "Organization",
+     "label": "ENIGMA Consortium",
+     "url": "https://enigmaconsortium.org/"
+   },
+   {
+     "id": "org002",
+     "type": "Organization",
+     "label": "ClinGen Consortium",
+     "url": "https://clinicalgenome.org/"
+   }	
+ ]
+
+# the Artifact (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "cam.Artifact",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "artifactType": "Variant Interpretation",
+    "dateCreated": "2019-12-20",
+    "dateLastModified": "2020-01-10"
+	
+    # the three Contributions made to the artifact	
+    "qualifiedContribution": [   	
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "cam.Contribution",
+        "startDate": "2019-11-20",       # when the contribution was made
+        "endDate": "2019-11-20",  
+        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionRole":              # what type of contribution
+          {
+            "code": "cro:0000107",
+            "label": "creator role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "wasSpecifiedBy":"2015 ACMG Guidelines"  # the method guiding the contribution 
+        "organizationalContext": "org001"        # the organization acted within when making the Contribution (ENIGMA)
+      }
+		
+      # Dereck's submission of the interpretation
+      {  
+        "id": "contrib002",
+        "type": "cam.Contribution",
+        "startDate": "2019-12-02",       # when the contribution was made
+        "endDate": "2019-12-02",  
+        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionRole":              # what type of contribution
+          {
+            "code": "cro:0000105",
+            "label": "submitter role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "organizationalContext": "org002"        # the organization acted within when making the Contribution (ClinGen)
+      }
+		
+      # Steven's acceptance of the interpretation
+      {
+        "id": "contrib003",
+        "type": "cam.Contribution",
+        "startDate": "2020-01-10",      # when the contribution was made
+        "endDate": "2020-01-10",  
+        "madeBy": "ag002",              # who made it (Steven)
+        "contributionRole":             # what type of contribution
+          {
+            "code": "cro:0000104",
+            "label": "acceptor role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          }, 
+        "organizationalContext": "org002"     # the organization acted within when making the Contribution  (ClinGen)
+        }
+    ]
+}
+
+ ## -------------------------------------------------------------------------------------------------------##
+
+# Example 2: PROV Model (Matt's Interpretation)  (*****'s hihglight key features to note)
+
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+  {
+    "id": "ag001a",          # ***** Note Dereck has two identities - one as an agent for ENIGMA, and another as an agent for ClinGen
+    "type": "prov.Agent",
+	"actedOnbehalfOf": "org001"
+    "label": "Derek (as an agent for ENIGMA)"
+   },
+  {
+    "id": "ag001b",
+    "type": "prov.Agent",
+	"actedOnbehalfOf": "org002"
+    "label": "Derek (as an Agent for ClinGen)"
+   },
+   {
+     "id": "ag002",
+     "type": "prov.Agent",
+	 "actedOnbehalfOf": "org002"
+     "label": "Steven (as an agent for ClinGen)"
+   },
+   {
+     "id": "org001",
+     "type": "prov.Agent",
+     "label": "ENIGMA Consortium",
+   },
+   {
+     "id": "org002",
+     "type": "prov.Agent",
+     "label": "ClinGen Consortium",
+   }	
+ ]
+
+# the Entity (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "prov:Entity",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "prov.type": "Variant Interpretation",
+    "generatedAtTime": "2019-12-20",
+    "ex.dateLastModified": "2020-01-10" # extension attribute - not covered in core PROV spec.
+	
+    # The three Activities through which contributions to the entity were made	
+    "wasGeneratedBy": [   	
+
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "prov.Activity",
+        "startedAtTime": "2019-11-20",           # when the contribution was made
+        "endedAtTime": "2019-11-20",  
+		
+        "qualifiedAssociation": 
+		 { 
+	       "id": "association001",
+           "type": "prov.Association",
+		   "agent": "ag001a",                   # who made the contribution (Dereck)  ***** agent001a here, different than Derek as agent001b below
+           "hadPlan":"2015 ACMG Guidelines"     # the method guiding the contribution  
+           "hadRole":                           # what type of contribution
+           {
+             "code": "cro:0000107",
+             "label": "creator role",
+             "system": "Contribution Role Ontology",
+             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+           }
+         }
+       }
+
+      # Dereck's submission of the interpretation
+      {                        
+        "id": "contrib002",
+        "type": "prov.Activity",
+        "startedAtTime": "2019-12-02",          # when the contribution was made
+        "endedAtTime": "2019-12-02",  
+		
+        "qualifiedAssociation": 
+		 { 
+	       "id": "association002",
+           "type": "prov.Association",
+		   "agent": "ag001b",                   # who made the contribution (Dereck)  ***** agent001b here, different than Derek as agent001a above
+           "hadRole":                           # what type of contribution
+           {
+             "code": "cro:0000105",
+             "label": "submitter role",
+             "system": "Contribution Role Ontology",
+             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+           }
+         }
+       }
+
+      # Steven's acceptance of the interpretation
+      {                        
+        "id": "contrib003",
+        "type": "prov.Activity",
+        "startedAtTime": "2020-01-10",          # when the contribution was made
+        "endedAtTime": "2020-01-10",  
+		
+        "qualifiedAssociation": 
+		 { 
+	       "id": "association003",
+           "type": "prov.Association",
+		   "agent": "ag002",                    # who made the contribution (Steven)
+           "hadRole":                           # what type of contribution
+           {
+             "code": "cro:0000104",
+             "label": "acceptor role",
+             "system": "Contribution Role Ontology",
+             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+           }
+         }
+       }
+
+ ## -------------------------------------------------------------------------------------------------------##
+
+# Example 3: PROV Model (Larry's Interpretation)  (largely same as Matt's interpretation - *****'s hihglight key differences)
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+   {
+    "id": "ag001a",
+    "type": "prov.Agent",
+	"actedOnbehalfOf": "org001"
+    "label": "Derek (as an agent for ENIGMA)"
+   },
+   {
+    "id": "ag001b",
+    "type": "prov.Agent",
+	"actedOnbehalfOf": "org002"
+    "label": "Derek (as an Agent for ClinGen)"
+   },
+   {
+     "id": "ag002",
+     "type": "prov.Agent",
+	 "actedOnbehalfOf": "org002"
+     "label": "Steven (as an agent for ClinGen)"
+   },
+   {
+     "id": "org001",
+     "type": "prov.Agent",
+     "label": "ENIGMA Consortium",
+   },
+   {
+     "id": "org002",
+     "type": "prov.Agent",
+     "label": "ClinGen Consortium",
+   }	
+ ]
+
+# the Entity (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "prov:Entity",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "prov.type": "Variant Interpretation",
+    "generatedAtTime": "2019-12-20",
+    "ex.dateLastModified": "2020-01-10" # extension attribute - not covered in core PROV spec.
+	
+    # The three Activities through which contributions to the entity were made	
+    "wasGeneratedBy": [   	
+
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "prov.Activity",
+ 
+        "prov.type": "creating"               # what type of contribution ***** (Larry's model uses prov.type in the Activity to capture this -  unclear if/how we might use CRO terms here)
+        "startedAtTime": "2019-11-20",        # when the contribution was made
+        "endedAtTime": "2019-11-20",  
+		
+        "qualifiedAssociation": 
+		 { 
+	       "id": "association001",
+           "type": "prov.Association",
+		   "agent": "ag001a",                 # who made the contribution (Dereck) 
+           "hadPlan":"2015 ACMG Guidelines"   # the method guiding the contribution 
+           "hadRole": "geneticist"            # the organizational role of the agent *****
+         }
+       }
+
+      # Dereck's submission of the interpretation
+      {                        
+        "id": "contrib002",
+        "type": "prov.Activity",
+        "prov.type": "submitting"             # what type of contribution ***** 
+
+        "startedAtTime": "2019-12-02",        # when the contribution was made
+        "endedAtTime": "2019-12-02",  
+		
+        "qualifiedAssociation": 
+		 { 
+	       "id": "association002",
+           "type": "prov.Association",
+		   "agent": "ag001b",                   # who made the contribution (Dereck) 
+           "hadRole": "curator"                 # the organizational role of the agent ***** 
+         }
+       }
+
+      # Steven's acceptance of the interpretation
+      {                        
+        "id": "contrib003",
+        "type": "prov.Activity",
+
+        "prov.type": "accepting"                # what type of contribution *****
+        "startedAtTime": "2020-01-10",          # when the contribution was made
+        "endedAtTime": "2020-01-10",  
+		
+        "qualifiedAssociation": 
+		 { 
+	       "id": "association003",
+           "type": "prov.Association",
+		   "agent": "ag002",                    # who made the contribution (Steven)
+           "hadRole": "administrator"           # the organizational role of the agent ***** 
+         }
+       }
+
+ ## -------------------------------------------------------------------------------------------------------##
+
+# Example 4: PROV Model with Extensions to emulate CAM structure ("ex" prefix marks extension elements)
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+   {
+    "id": "ag001",
+    "type": "Agent",
+    "ex.externalId": "orcid:0000-0001-9815-2288",
+    "label": "Derek"
+   },
+   {
+     "id": "ag002",
+     "type": "Agent",
+     "ex.externalId": "orcid:0000-0001-1162-6284",
+     "label": "Steven"
+   },
+   {
+     "id": "org001",
+     "type": "Organization",
+     "label": "ENIGMA Consortium",
+     "ex.url": "https://enigmaconsortium.org/"
+   },
+   {
+     "id": "org002",
+     "type": "Organization",
+     "label": "ClinGen Consortium",
+     "ex.url": "https://clinicalgenome.org/"
+   }	
+ ]
+
+# the Artifact (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "prov.Entity",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "prov.type": "Variant Interpretation",
+    "generatedAtTime": "2019-12-20",
+    "ex.dateLastModified": "2020-01-10"
+	
+    # the three Contributions made to the artifact	
+    "qualifiedContribution": [   	
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "cam.Contribution",
+        "startDate": "2019-11-20",       # when the contribution was made
+        "endDate": "2019-11-20",  
+        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionRole":              # what type of contribution
+          {
+            "code": "cro:0000107",
+            "label": "creator role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "wasSpecifiedBy":"2015 ACMG Guidelines"  # the method guiding the contribution 
+        "organizationalContext": "org001"        # the organization acted within when making the Contribution (ENIGMA)
+      }
+		
+      # Dereck's submission of the interpretation
+      {  
+        "id": "contrib002",
+        "type": "cam.Contribution",
+        "startDate": "2019-12-02",       # when the contribution was made
+        "endDate": "2019-12-02",  
+        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionRole":              # what type of contribution
+          {
+            "code": "cro:0000105",
+            "label": "submitter role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "organizationalContext": "org002"        # the organization acted within when making the Contribution (ClinGen)
+      }
+		
+      # Steven's acceptance of the interpretation
+      {
+        "id": "contrib003",
+        "type": "cam.Contribution",
+        "startDate": "2020-01-10",      # when the contribution was made
+        "endDate": "2020-01-10",  
+        "madeBy": "ag002",              # who made it (Steven)
+        "contributionRole":             # what type of contribution
+          {
+            "code": "cro:0000104",
+            "label": "acceptor role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          }, 
+        "organizationalContext": "org002"     # the organization acted within when making the Contribution  (ClinGen)
+        }
+    ]
+}
+
+
+
