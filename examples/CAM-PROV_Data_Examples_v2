@@ -416,7 +416,7 @@
 
 
 
-# Example 5: CAM Model (same as Example 1), with Affiliaton objects added to represent organizational roles
+# Example 5: CAM Model with Affiliations (same as Example 1, but with Affiliaton objects added to represent organizational roles)
 #  *****'s below mark areas werhe affiliations are used in the data
 
 # The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
