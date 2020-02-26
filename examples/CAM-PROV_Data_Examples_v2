@@ -153,10 +153,10 @@
         "endedAtTime": "2019-11-20",  
 		
         "qualifiedAssociation": 
-           { 
-	   "id": "association001",
-	   "type": "prov.Association",
-	   "agent": "ag001a",                       # who made the contribution (Dereck)  ***** agent001a here, different than Derek as agent001b below
+          { 
+           "id": "association001",
+           "type": "prov.Association",
+           "agent": "ag001a",                   # who made the contribution (Dereck)  ***** agent001a here, different than Derek as agent001b below
            "hadPlan":"2015 ACMG Guidelines"     # the method guiding the contribution  
            "hadRole":                           # what type of contribution
               {
@@ -165,8 +165,8 @@
                "system": "Contribution Role Ontology",
                "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
               }
-            }
-        }
+          }
+       }
 
       # Dereck's submission of the interpretation
       {                        
