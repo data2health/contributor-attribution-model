@@ -47,7 +47,7 @@
         "type": "cam.Contribution",
         "startDate": "2019-11-20",       # when the contribution was made
         "endDate": "2019-11-20",  
-        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
         "contributionRole":              # what type of contribution
           {
             "code": "cro:0000107",
@@ -55,7 +55,7 @@
             "system": "Contribution Role Ontology",
             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
           },
-        "wasSpecifiedBy":"2015 ACMG Guidelines"  # the method guiding the contribution 
+        "wasSpecifiedBy":"2015 ACMG Guidelines"  # the method guiding the contribution. Here representated as a string, but could be its own object. 
         "organizationalContext": "org001"        # the organization acted within when making the Contribution (ENIGMA)
       }
 		
@@ -65,7 +65,7 @@
         "type": "cam.Contribution",
         "startDate": "2019-12-02",       # when the contribution was made
         "endDate": "2019-12-02",  
-        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
         "contributionRole":              # what type of contribution
           {
             "code": "cro:0000105",
@@ -82,7 +82,7 @@
         "type": "cam.Contribution",
         "startDate": "2020-01-10",      # when the contribution was made
         "endDate": "2020-01-10",  
-        "madeBy": "ag002",              # who made it (Steven)
+        "contributionMadeBy": "ag002",  # who made it (Steven)
         "contributionRole":             # what type of contribution
           {
             "code": "cro:0000104",
@@ -103,7 +103,7 @@
 # The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
 "agents": [
    {
-    "id": "ag001a",          # ***** Note Dereck has two identities - one as an agent for ENIGMA, and another as an agent for ClinGen
+    "id": "ag001a",          # ***** Note Dereck has two identities - one as an agent for ENIGMA, and another as an agent for ClinGen (below)
     "type": "prov.Agent",
     "actedOnbehalfOf": "org001"
     "label": "Derek (as an agent for ENIGMA)"
@@ -417,7 +417,6 @@
 
 
 # Example 5: CAM Model with Affiliations (same as Example 1, but with Affiliaton objects added to represent organizational roles)
-#  *****'s below mark areas werhe affiliations are used in the data
 
 # The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
 "agents": [
@@ -470,12 +469,22 @@
    {
     "id": "affiliation003",
     "type": "Affiliation",
+    "agent": "ag001"           # Derek
+    "organization": "org003"   # Mayo Clinic
+    "organizationalRole": "geneticist"
+    "startDate": "2010-01-05"
+    "status": "active"
+   }
+   {
+    "id": "affiliation004",
+    "type": "Affiliation",
     "agent": "ag002"           # Steven
     "organization": "org002"   # ClinGen
     "organizationalRole": "administrator"
     "startDate": "2009-12-15"
     "status": "active"
     }
+
   ] 
   
 # the Artifact (a curated variant interpretation record)
@@ -496,7 +505,7 @@
         "type": "cam.Contribution",
         "startDate": "2019-11-20",       # when the contribution was made
         "endDate": "2019-11-20",  
-        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
         "contributionRole":              # what type of contribution
           {
             "code": "cro:0000107",
@@ -505,7 +514,7 @@
             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
           },
         "wasSpecifiedBy":"2015 ACMG Guidelines"      # the method guiding the contribution 
-        "organizationalContext": "affiliation001"    # ***** an affiliation object describing the agent's organizational role when contribution made
+        "organizationalContext": "affiliation001"    # an Affiliation object describing the agent's organizational role when contribution made
       }
 		
       # Dereck's submission of the interpretation
@@ -514,7 +523,7 @@
         "type": "cam.Contribution",
         "startDate": "2019-12-02",       # when the contribution was made
         "endDate": "2019-12-02",  
-        "madeBy": "ag001",               # who made it (Dereck)
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
         "contributionRole":              # what type of contribution
           {
             "code": "cro:0000105",
@@ -522,7 +531,7 @@
             "system": "Contribution Role Ontology",
             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
           },
-        "organizationalContext":  "affiliation002"    # ***** an affiliation object describing the agent's organizational role when contribution made
+        "organizationalContext":  "affiliation002"    # an affiliation object describing the agent's organizational role when contribution made
       }
 		
       # Steven's acceptance of the interpretation
@@ -531,7 +540,7 @@
         "type": "cam.Contribution",
         "startDate": "2020-01-10",      # when the contribution was made
         "endDate": "2020-01-10",  
-        "madeBy": "ag002",              # who made it (Steven)
+        "contributionMadeBy": "ag002",  # who made it (Steven)
         "contributionRole":             # what type of contribution
           {
             "code": "cro:0000104",
@@ -539,7 +548,7 @@
             "system": "Contribution Role Ontology",
             "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
           }, 
-        "organizationalContext":  "affiliation003"    # ***** an affiliation object describing the agent's organizational role when contribution made
+        "organizationalContext":  "affiliation004"    # an affiliation object describing the agent's organizational role when contribution made
         }
     ]
 }

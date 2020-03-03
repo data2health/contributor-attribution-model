@@ -1,0 +1,253 @@
+# CAM-VA Data Examples
+
+# Modeled Scenario: 
+
+# A geneticist (Dereck) authors a variant pathogenicity interpretation as part of a ENIGMA Expert Panel, and submits it on behalf of a ClinGen working group, using the ClinGen Variant Curation Interface tool. Subsequently, a ClinGen VCI team member (Steven) accepts the submission for inclusion in the VCI repository.
+
+# Details:
+   # - what: An interpretation record asserting BRAFV600E as Pathogenic for Breast Cancer
+   # - who: Derek, Steven
+   # - when:  authored Nov 20 2019, submitted Dec 02 2010, accepted Jan 10 2020
+   # - how: created using the ACMG Guidelines
+   # - type of contributions (roles agents played): creator, submitter, acceptor
+   # - organizational context: Derek is a geneticist in his home organization (Mayo Clinic), a member of ENIGMA expert panel, and a curator for ClinGen. Steven as an administrator on the ClinGen VCI team.
+   # - funding support: Derek supported by NIH Grant R01-27048136B
+ 
+# A key aspect of this scenario is that Derek creates the record in his role as a ENIGMA expert panel member, and submits in his role as a ClinGen curator.
+
+## --------------------------------------------------------------------------------------------------- ##
+
+# Example 1: 
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+   {
+    "id": "ag001",
+    "type": "Agent",
+    "externalId": "orcid:0000-0001-9815-2288",
+    "label": "Derek"
+   },
+   {
+     "id": "ag002",
+     "type": "Agent",
+     "externalId": "orcid:0000-0001-1162-6284",
+     "label": "Steven"
+   },
+   {
+     "id": "org001",
+     "type": "Organization",
+     "label": "ENIGMA Consortium",
+     "url": "https://enigmaconsortium.org/"
+   },
+   {
+     "id": "org002",
+     "type": "Organization",
+     "label": "ClinGen Consortium",
+     "url": "https://clinicalgenome.org/"
+   }	
+ ]
+
+# the Artifact (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "cam.Artifact",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "artifactType": "Variant Interpretation",
+    "dateCreated": "2019-12-20",
+    "dateLastModified": "2020-01-10"
+	
+  # the three Contributions made to the artifact	
+    "qualifiedContribution": [   	
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "cam.Contribution",
+        "startDate": "2019-11-20",       # when the contribution was made
+        "endDate": "2019-11-20",  
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
+        "contributorRole":              # what type of contribution
+          {
+            "code": "cro:0000107",       # we use terms from the Contributor ROle Ontology to standardize contribution role/type
+            "label": "creator role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "wasSpecifiedBy":"2015 ACMG Guidelines"  # the method guiding the contribution. Here representated as a string, but could be its own object. 
+        "organizationalContext": "org001"        # the organization acted within when making the Contribution (ENIGMA)
+      }
+		
+      # Dereck's submission of the interpretation
+      {  
+        "id": "contrib002",
+        "type": "cam.Contribution",
+        "startDate": "2019-12-02",       # when the contribution was made
+        "endDate": "2019-12-02",  
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
+        "contributorRole":              # what type of contribution
+          {
+            "code": "cro:0000105",
+            "label": "submitter role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "organizationalContext": "org002"        # the organization acted within when making the Contribution (ClinGen)
+      }
+		
+      # Steven's acceptance of the interpretation
+      {
+        "id": "contrib003",
+        "type": "cam.Contribution",
+        "startDate": "2020-01-10",      # when the contribution was made
+        "endDate": "2020-01-10",  
+        "contributionMadeBy": "ag002",  # who made it (Steven)
+        "contributorRole":             # what type of contribution
+          {
+            "code": "cro:0000104",
+            "label": "acceptor role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          }, 
+        "organizationalContext": "org002"     # the organization acted within when making the Contribution  (ClinGen)
+        }
+    ]
+}
+
+## -------------------------------------------------------------------------------------------------------##
+
+# Example 2: CAM Model with Affiliations (same as Example 1, but with Affiliaton objects added to represent organizational roles)
+
+# The Agents - full representations of Dereck, Steven, and their organizations - which are referenced within data objects below.
+"agents": [
+   {
+    "id": "ag001",
+    "type": "Agent",
+    "externalId": "orcid:0000-0001-9815-2288",
+    "label": "Derek"
+   },
+   {
+    "id": "ag002",
+    "type": "Agent",
+    "externalId": "orcid:0000-0001-1162-6284",
+    "label": "Steven"
+   },
+   {
+    "id": "org001",
+    "type": "Organization",
+    "label": "ENIGMA Consortium",
+    "url": "https://enigmaconsortium.org/"
+   },
+   {
+    "id": "org002",
+    "type": "Organization",
+    "label": "ClinGen Consortium",
+    "url": "https://clinicalgenome.org/"
+   }	
+ ]
+
+# The Affiliations (objects that represent how an agent is affiliated with an organization, including roles/positions held, and dates of affiliation)
+"affiliations":  [
+   {
+    "id": "affiliation001",
+    "type": "Affiliation",
+    "agent": "ag001"           # Derek
+    "organization": "org001"   # ENIGMA
+    "organizationalRole": "expert panel member"
+    "startDate": "2016-04-18"
+    "status": "active"
+   }
+   {
+    "id": "affiliation002",
+    "type": "Affiliation",
+    "agent": "ag001"           # Derek
+    "organization": "org002"   # ClinGen
+    "organizationalRole": "curator"
+    "startDate": "2017-09-22"
+    "status": "active"
+   }
+   {
+    "id": "affiliation003",
+    "type": "Affiliation",
+    "agent": "ag001"           # Derek
+    "organization": "org003"   # Mayo Clinic
+    "organizationalRole": "geneticist"
+    "startDate": "2010-01-05"
+    "status": "active"
+   }
+   {
+    "id": "affiliation004",
+    "type": "Affiliation",
+    "agent": "ag002"           # Steven
+    "organization": "org002"   # ClinGen
+    "organizationalRole": "administrator"
+    "startDate": "2009-12-15"
+    "status": "active"
+    }
+
+  ] 
+  
+# the Artifact (a curated variant interpretation record)
+  {
+    "id": "vpi001",  
+    "type": "cam.Artifact",
+    "description": "BRAFV600E as Pathogenic for Breast Cancer",
+
+    "artifactType": "Variant Interpretation",
+    "dateCreated": "2019-12-20",
+    "dateLastModified": "2020-01-10"
+	
+  # the three Contributions made to the artifact	
+    "qualifiedContribution": [   	
+      # Dereck's creation of the interpretation
+      {                        
+        "id": "contrib001",
+        "type": "cam.Contribution",
+        "startDate": "2019-11-20",       # when the contribution was made
+        "endDate": "2019-11-20",  
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
+        "contributorRole":              # what type of contribution
+          {
+            "code": "cro:0000107",
+            "label": "creator role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "wasSpecifiedBy":"2015 ACMG Guidelines"      # the method guiding the contribution 
+        "organizationalContext": "affiliation001"    # an Affiliation object describing the agent's organizational role when contribution made
+      }
+		
+      # Dereck's submission of the interpretation
+      {  
+        "id": "contrib002",
+        "type": "cam.Contribution",
+        "startDate": "2019-12-02",       # when the contribution was made
+        "endDate": "2019-12-02",  
+        "contributionMadeBy": "ag001",   # who made it (Dereck)
+        "contributorRole":              # what type of contribution
+          {
+            "code": "cro:0000105",
+            "label": "submitter role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          },
+        "organizationalContext":  "affiliation002"    # an affiliation object describing the agent's organizational role when contribution made
+      }
+		
+      # Steven's acceptance of the interpretation
+      {
+        "id": "contrib003",
+        "type": "cam.Contribution",
+        "startDate": "2020-01-10",      # when the contribution was made
+        "endDate": "2020-01-10",  
+        "contributionMadeBy": "ag002",  # who made it (Steven)
+        "contributorRole":             # what type of contribution
+          {
+            "code": "cro:0000104",
+            "label": "acceptor role",
+            "system": "Contribution Role Ontology",
+            "systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+          }, 
+        "organizationalContext":  "affiliation004"    # an affiliation object describing the agent's organizational role when contribution made
+        }
+    ]
+}
