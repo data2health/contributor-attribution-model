@@ -135,7 +135,7 @@ Organization
 * Scientific consortia such as the `Global Alliance for Genomics and Health <https://www.ga4gh.org/>`_ and `ClinGen <https://clinicalgenome.org/>`_.
 * Businesses/companies such as the publisher `Elsevier <https://www.elsevier.com/>`_
 * A medical non-profit organization scuch as the `American Heart Association <https://www2.heart.org>`_
-* A government agency) such as the `Centers for Disease Control <https://www.cdc.gov/>`_
+* A government agency such as the `Centers for Disease Control <https://www.cdc.gov/>`_
 * A philanthropic fraternity such as `Shriners International <https://www.shrinersinternational.org/>`_
 * A group of students assigned to complete a class project
  

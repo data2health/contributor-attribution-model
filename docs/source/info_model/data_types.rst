@@ -198,8 +198,7 @@ duration
 Complex Data Types
 @@@@@@@@@@@@@@@@@
 
-In contrast to ‘simple’ data types, ‘complex’ data types specify structured objects with attributes of their own. These objects do not represent primary domain entities, are not 'identified' in the data.
-
+In contrast to ‘simple’ data types, ‘complex’ data types specify structured objects with attributes of their own - often combining primitives (and other complex data types) to express increasingly complex semantics. These data types do not represent primary domain entities, and are not given identifiers in the data. 
 .. _coding:
 
 Coding
