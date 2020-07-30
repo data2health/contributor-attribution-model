@@ -3,8 +3,6 @@
 Supporting Ontologies
 !!!!!!!!!!!!!!!!!!!!!
 
-More coming soon . . .
-
 
 CRediT taxonomy
 @@@@@@@@@@@@@@@@@@@@@@@@@@@
