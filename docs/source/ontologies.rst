@@ -6,10 +6,10 @@ Supporting Ontologies
 More coming soon . . .
 
 
-Contribution Model Ontology
+CRediT taxonomy
 @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-Coming soon . . . 
+https://www.casrai.org/credit.html 
 
 .. _cro-ontology:
 
