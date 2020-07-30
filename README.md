@@ -19,7 +19,7 @@ The final CAM Specification will be comprised of the following components:
 
 
 ## Status
-At present only the foundational Informaton Model has been defined, along with the supporting Contribution Role Ontology (CRO). We expect an initial draft of all components to be complete and ready for a v0 release by the end of Spetember 2019. 
+At present only the foundational Informaton Model has been defined, along with the supporting Contribution Role Ontology (CRO). An initial draft of all components for a v0 release is in progress. 
 
 ## Contributors
 - Melissa Haendel
