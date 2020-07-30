@@ -14,7 +14,7 @@ The final CAM Specification will be comprised of the following components:
 2. A **JSON-LD schema** formalization of the Information Model. ``coming soon`` 
 3. A **TSV-based format and curation template**, based on the Information Model. ``coming soon``
 4. **Ontologies** and **LD-Context Mappings** to support creation of RDF linked data. ``coming soon``
-5.  A **code library and services** to support data creation and format interchange. ``coming soon``
+5.  A **code library** to support data creation and format interchange. ``coming soon``
 6. An **Implementation Guide** to support creation of CAM-compliant data in different formats and contexts. ``coming soon``
 
 
