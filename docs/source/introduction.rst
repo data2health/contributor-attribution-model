@@ -35,13 +35,6 @@ The scope of the Contributor Attribution Model is limited to representing the na
 This three object structure is intended to be used as a **module** in the context of a larger data model that captures the complete semantics of a given domain or use case. Implementations can refine or extend the CAM in different ways to suit their specific domain and use case, as described in more detail in the :ref:`implementation-guide`. 
 
 
-Relationship to PROV
-@@@@@@@@@@@@@@@@@@@@
-The scope of the CAM overlaps with a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers contributor attribution, but has been tailored to fit our use case more directly. While informed by the work of PROV, CAM was developed independently due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented PROV from meeting our primary requirement for as simple and concise a model as possible. However, ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension of PROV.  
-
-Mappings between the CAM and PROV models will be provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, which is also based on the PROV model, will also also be described here.
-
-
 Application Use Cases
 @@@@@@@@@@@@@@@@@@@@@
 Applications implementing CAM-based modules may include:
