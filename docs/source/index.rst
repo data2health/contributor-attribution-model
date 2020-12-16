@@ -15,7 +15,7 @@ The final CAM Specification will be comprised of the following **six components*
 5.  A :ref:`code library and services <code-and-services>` to support data creation and format interchange. ``coming soon``
 6. An :ref:`Implementation Guide <implementation-guide>` to support creation of CAM-compliant data in different formats and contexts. ``coming soon``
 
-.. note:: At present only the foundational :ref:`information-model` has been defined, along with the supporting :ref:`Contribution Role Ontology (CRO) <cro-ontology>`. We expect an initial draft of additional components of the framework to be ready for release in the early 2020.  
+.. note:: At present only the foundational :ref:`information-model` has been defined, along with the supporting :ref:`Contribution Role Ontology (CRO) <cro-ontology>`. We expect an initial draft of additional components of the framework to be ready for release in the early 2021.  
 
 .. toctree::
    :maxdepth: 4
