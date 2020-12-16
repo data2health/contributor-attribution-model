@@ -18,7 +18,7 @@ Specification Components
 2. A :ref:`JSON-LD schema <json-schema>` that provides a computable specification of the IM to support data creation and validation. This includes an Linked Data (LD)-context document with mappings between schema elements and ontology terms, enabling the creation of RDF/Linked Data. ``coming soon``
 3. A :ref:`Tabular File Format <tsv-format>` representation of the IM that provides a low-tech, curator friendly tool for collecting contribution metadata. ``coming soon``
 4.  :ref:`Ontologies <ontologies>` that provide a semantic foundation for the data model. These will support a complete ontological mapping of schema elements and provide terms for value sets - enabling ontological support for operating on contribution metadata. ``coming soon``
-5. A :ref:`Code Library and Services <code-and-services>` that can support interconversion of data formats (e.g. tabular to RDF), identifier mappings, and terminology support for building valu sets. ``coming soon``
+5. A :ref:`Code Library <code>` that can support interconversion of data formats (e.g. tabular to RDF), identifier mappings, and terminology support for building valu sets. ``coming soon``
 6. An :ref:`Implementation Guide <implementation-guide>` to support creation of CAM-compliant data in different formats and contexts. ``coming soon``
 
 

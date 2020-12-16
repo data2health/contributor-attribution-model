@@ -1,6 +1,6 @@
-.. _code-and-services:
+.. _code:
 
-Code and Services
+Code
 !!!!!!!!!!!!!!!!!
 
 More coming soon . . .

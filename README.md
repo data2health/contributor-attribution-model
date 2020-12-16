@@ -14,12 +14,12 @@ The final CAM Specification will be comprised of the following components:
 2. A **JSON-LD schema** formalization of the Information Model. ``coming soon`` 
 3. A **TSV-based format and curation template**, based on the Information Model. ``coming soon``
 4. **Ontologies** and **LD-Context Mappings** to support creation of RDF linked data. ``coming soon``
-5.  A **code library and services** to support data creation and format interchange. ``coming soon``
+5.  A **code library** to support data creation and format interchange. ``coming soon``
 6. An **Implementation Guide** to support creation of CAM-compliant data in different formats and contexts. ``coming soon``
 
 
 ## Status
-At present only the foundational Informaton Model has been defined, along with the supporting Contribution Role Ontology (CRO). We expect an initial draft of all components to be complete and ready for a v0 release by the end of Spetember 2019. 
+At present only the foundational Informaton Model has been defined, along with the supporting Contribution Role Ontology (CRO). An initial draft of all components for a v0 release is in progress. 
 
 ## Contributors
 - Melissa Haendel
