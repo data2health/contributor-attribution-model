@@ -30,16 +30,16 @@ The scope of the Contributor Attribution Model is limited to representing the na
 .. figure:: images/introduction_model.png
    :align: center
 
-   **Figure 1**: Definition of core classes and relationships in the CAM. A detailed representation of each class can be found in the :ref:`Information Model<information-model>`, and a formal specification provided by a :ref:`JSON schema <json-schema>`.
+   **Figure 1**: Definition of core classes and relationships in the CAM. Details about each class can be found in the :ref:`Information Model<information-model>`, and a formal specification is provided by a :ref:`JSON schema <json-schema>`.
 
 This three object structure is intended to be used as a **module** in the context of a larger data model that captures the complete semantics of a given domain or use case. Implementations can refine or extend the CAM in different ways to suit their specific domain and use case, as described in more detail in the :ref:`implementation-guide`. 
 
 
 Relationship to PROV
 @@@@@@@@@@@@@@@@@@@@
-The scope of the CAM overlaps with a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers contributor attribution, but has been tailored to fit our use case more directly. While informed by the work of PROV, CAM was developed independently due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented PROV from meeting our primary requirement for as simple and concise a model as possible. However, ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension of PROV.  
+The scope of the CAM overlaps with a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers agent attribution, but CAM has been tailored to fit the Contribution use case more directly. While informed by the work of PROV, CAM was developed independently due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented PROV from meeting our primary requirement for as simple and concise a model as possible. However, ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension of PROV.  
 
-Mappings between the CAM and PROV models will be provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, which is also based on the PROV model, will also also be described here.
+Mappings between the CAM and PROV models will be provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, , will also also be described here.
 
 
 Application Use Cases
@@ -62,16 +62,16 @@ Data Examples
 
 **1. An Author Contribution to a Journal Article**  
 
-This simple example includes minimal metadata describing one author's contribution to the publication of a `journal article <https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006186#authcontrib>`_, structured according to the CAM specification. The record describes only the role the agent played, and the organizational context in which the contribution was made.
+This simple example includes minimal metadata describing one author's contribution to the publication of a `journal article <https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006186#authcontrib>`_, structured according to the CAM specification. The Conribution object in this record describes the role the agent played, and the organizational context in which the contribution was made.
 
 ::
 
 	"id": "doi:10.1371/journal.pgen.1006186", # the Artifact (a published journal article)
 	"type": "camo:Artifact",
-	"artifactType": "wd:Q18918145" (journal article),
+	"artifactType": "wd:Q18918145"  # Journal Article,
 	"label": "Epistatic Gene-Based Interaction Analyses for Glaucoma in eMERGE and NEIGHBOR Consortium",
 	"dateCreated": "2016-09-13",
-	"qualifiedContribution": [    # the Contribution
+	"qualifiedContribution": [    # the Contribution object
                 {
 		"id": "ex:contribution001",
 		"type": "cro:Contribution",
@@ -102,7 +102,7 @@ This simple example includes minimal metadata describing one author's contributi
 
 **2. A Curator Contribution to a CIViC Database Record**  
 
-This richer example includes more extensive contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the CIViC Knowledgebase, structured according to the CAM specification. The record includes details of **when**, **how**, **where**, and **in what context** contributions were made by four agents during the life-cycle of this curated record. The example below captures just one of these contributions, but the `complete example with all four is here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_. 
+This richer example includes more extensive contribution metadata from `this variant interpretation record <https://civicdb.org/api/assertions/10>`_ in the CIViC Knowledgebase, structured according to the CAM specification. The record includes details of **when**, **how**, **where**, and **in what context** contributions were made by four agents during the life-cycle of this curated record. The example below captures just one of these contributions, but the `complete example describing all four dontributions is here <https://github.com/data2health/contributor-attribution-model/blob/master/examples/civic_aid10_example.yaml>`_. 
 
 ::
 
@@ -165,6 +165,11 @@ This richer example includes more extensive contribution metadata from `this var
 	    }
 	]
 
+**Additional Notes:** 
+
+* Expansions of josn keys and identifier pefixes in the data above will be provided in a :ref:`JSON-LD context file <ld-context>`.  
+* Attributes preceded by an underscore (e.g. ``"_expertise"``) represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.'
+* Additional data examples will be provided as part of the :ref:`Implementation Guide <implementation-guide>`.
 
 .. important:: How concepts such as **Organizations**, **Methods**, and **Locations** are represented is not in scope for the CAM, and is left to implementations to decide.  In the CIViC example above, a structured json object is created to represent these concepts and a few attributes of each. But implementations could choose to capture organization, method, and location values as simple strings if desired, for a much more concise representation. For example: 
 
@@ -177,8 +182,4 @@ This richer example includes more extensive contribution metadata from `this var
 	"occurredAt": "United States"
 
 
-**Additional Notes:** 
 
-* Expansions of identifier pefixes in the data above will be provided in a :ref:`JSON-LD context file <ld-context>`.  
-* Attributes preceded by an underscore (e.g. ``"_expertise"``) represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.'
-* Additional data examples will be provided as part of the :ref:`Implementation Guide <implementation-guide>`.

@@ -63,7 +63,7 @@ Contribution
      - A role indicating the nature of the contribution.
      - 0..m
      - MAY
-     - coding <<:ref:`Contribution Role <contribution-role>`>>
+     - coding <<:ref:`Contribution Role <contributor-role>`>>
    * - **startDate**
      - The date and/or time that the contribution activity began.
      - 0..1
@@ -116,9 +116,9 @@ Contribution
 
 **Implementation Notes:** 
  
-* **Using the Contribution Role Value Set**
+* **Using the Contributor Role Value Set**
 
-    * Use of the :ref:`Contribution Role Value Set <contribution-role>` that is bound to the *realizedRole* attribute above is RECOMMENDED but not required. 
+    * Use of the :ref:`Contributor Role Value Set <contribution-role>` to populate values for the *realizedRole* attribute above is RECOMMENDED but not required. This value set uses terms from the `Contribution Role Ontology (CRO) <https://github.com/data2health/contributor-role-ontology>`_ .
     * Implementations can choose to refine or extend this value set that we provide as part of the CAM specification, or use their own, as described in the :ref:`Implementation Guide <implementation-guide>`.
 	
 * **‘Placeholder’ Classes** (Location, Method, Funding Source) 
@@ -131,11 +131,11 @@ Contribution
 
 * **Capturing Multiple Contribution Roles**: 
 
-    * A contribution MUST connect a single Agent to a single Artifact. But a single Contribution object MAY capture multiple roles played by the agent in generating the artifact - simply by including more than one CRO contribution role in the *realizedRole* slot. This pattern provides a more concise representation when data creators do not need to capture details of each role played (i.e. how, when, and where each was realized). In cases where such details for each role are required, separate Contribution objects MUST be created for each role played. 
+    * A contribution MUST connect a single Agent to a single Artifact. But a single Contribution object MAY capture multiple roles played by the agent in generating the artifact - simply by including more than one CRO contribution role in the *realizedRole* slot. This pattern provides a more concise representation when data creators do not need to capture unique details about each realized role (i.e. how, when, and where each was performed). In cases where such details for each role are required, separate Contribution objects MUST be created for each role played. 
 	
 * **Direction of Contribution Relationships**:
   
-    * Relationships to and from an Agent or Artifact can be created in a Contribution object. Note here that the *qualifiedContribution* relationship can be used to connect either an Artifact or an Agent to a Contribution. The relationships nd their directionality selected will depend on whether an Artifact- or Agent-centric perspective on the data is being captured. When the goal is to describe all contributions made to a particular Artifact, links are created from Artifact to Contribution to Agent. When the goal is to describe all contributions made by a particular Agent, links are created from AGent to Contribution to Artifact. 
+    * Relationships to and from an Agent or Artifact can be created in a Contribution object. Note here that the *qualifiedContribution* relationship can be used to connect either an Artifact or an Agent to a Contribution. The relationships and their directionality selected will depend on whether an Artifact- or Agent-centric perspective on the data is being captured. When the goal is to describe all contributions made to a particular Artifact, links are created from Artifact to Contribution to Agent. When the goal is to describe all contributions made by a particular Agent, links are created from AGent to Contribution to Artifact. 
 
 
 

@@ -31,9 +31,6 @@ The final CAM Specification will be comprised of the following **six components*
    appendices/index
 
 
-
-
-
 .. Indices and tables
 .. !!!!!!!!!!!!!!!!!!
 .. * :ref:`genindex`

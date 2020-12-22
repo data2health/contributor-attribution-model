@@ -66,7 +66,7 @@ Agent
 
 * **Agent Instances**:
 
-    * Agent is an **‘abstract class’**, and therefore SHOULD NOT be directly instantiated. A concrete subclass (:ref:`Person <person>`, :ref:`Organization <organization>`, or :ref:`Computational Agent <computational-agent>`) SHOULD be selected to represent any agent in the data. The attributes defined for the abstract Agent are inherited and extended by its two child classes. 
+    * Agent is an **‘abstract class’**, and therefore SHOULD NOT be directly instantiated. A concrete subclass (:ref:`Person <person>`, :ref:`Organization <organization>`, or :ref:`Computational Agent <computational-agent>`) SHOULD be selected to represent any agent in the data. The attributes defined for the abstract Agent class are inherited and extended by its child classes. 
 
 * **Extensions to the Agent Class**: 
 

@@ -91,3 +91,66 @@
       occurredAt: "97210"
 
  
+ #-------------------------------------------------------------------
+ 
+ 
+ # JSON version of the same example, used for initial RTD site example:
+ 
+	"id": "civic:AID10",  # the Artifact (a curated variant interpretation record)
+	"type": "camo:Artifact",
+	"artifactType": "wd:Q49848",
+	"label": "AID10",
+	"description": "Vemurafenib and cobimetinib combination is an...",
+	"url": "https://civicdb.org/api/assertions/10",
+	"dateCreated": "2018-11-08T16:42:21.820Z",
+	"qualifiedContribution": [   # the Contribution
+		{
+		"id": "ex:contribution001",
+		"type": "cro:Contribution",
+		"endDate": "2018-11-01T18:54:05.924Z",
+		"hadAgent":      # the Agent
+			{
+			"id": "civic:110",
+			"type": "camo:Agent",
+			"externalId": "orcid:0000-0001-9815-2288",
+			"label": "Arpad Danos",
+			"_display_name": "arpaddanos",
+			"_expertise": "Research Scientist",
+			"_orgRole": "admin"
+			},
+		"hadRole": [
+			{
+			"code": "cro:0000XXX",
+			"label": "creator role",
+			"system": "Contribution Role Ontology",
+			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+			},
+			{
+			"code": "cro:0000105",
+			"label": "submitter role",
+			"system": "Contribution Role Ontology",
+			"systemURL": "http://purl.obolibrary.com/obo/cro.owl"
+			}
+		   ],
+		"organizationalContext":
+			{
+			"id": "wd:Q27612411",
+			"type": "camo:Organization",
+			"label": "CIViC database",
+			"url": "https://civicdb.org/"
+			},
+		"wasSpecifiedBy": 
+			{
+			"id": "doi:10.1101/700179",
+			"type": "camo:Method",
+			"label": "The CIViC knowledge model and standard operating procedures for curation and clinical interpretation of variants in cancer"
+			},
+		"occurredAt":
+			{
+			"id": "civic:214",
+			"type": "camo:Location",
+			"label": "United States",
+			"externalID": "iso:US"
+			}
+	    }
+	]

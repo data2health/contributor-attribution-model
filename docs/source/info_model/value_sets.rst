@@ -5,8 +5,8 @@ Value Sets
 
 Value Sets are . . .
 
-.. _contribution-role:
-Contribution Role Value Set
+.. _contributor-role:
+Contributor Role Value Set
 @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
