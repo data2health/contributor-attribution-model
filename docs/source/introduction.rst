@@ -37,9 +37,9 @@ This three object structure is intended to be used as a **module** in the contex
 
 Relationship to PROV
 @@@@@@@@@@@@@@@@@@@@
-The scope of the CAM overlaps with a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers agent attribution, but CAM has been tailored to fit the Contribution use case more directly. While informed by the work of PROV, CAM was developed independently due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented PROV from meeting our primary requirement for as simple and concise a model as possible. However, ongoing efforts aim to achieve a level of semantic and terminological alignment that would allow CAM to be implemented as a formal extension of PROV.  
+The scope of the CAM overlaps with a subset of the `W3C PROV specification <https://www.w3.org/2011/prov/wiki/Main_Page>`_ that covers agent attribution, but CAM has been tailored to fit the Contribution use case more directly and succinctly. While informed by the work of PROV, CAM was developed independently due to a few small but significant semantic and normative incompatibilities (see :ref:`Appendix I <relationship-to-standards>`), which prevented PROV from meeting our primary use case for as simple and concise a model as possible to connect an Artifact to an account of Agent contributions. 
 
-Mappings between the CAM and PROV models will be provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, , will also also be described here.
+Mappings between the CAM and PROV models will be provided in :ref:`Appendix I <relationship-to-standards>`, where areas of semantic incompatibility and efforts toward harmonization are also discussed. Mappings between the CAM and the `FHIR Provenance resource <https://www.hl7.org/fhir/provenance.html>`_, , will also be described here.
 
 
 Application Use Cases
@@ -167,7 +167,7 @@ This richer example includes more extensive contribution metadata from `this var
 
 **Additional Notes:** 
 
-* Expansions of josn keys and identifier pefixes in the data above will be provided in a :ref:`JSON-LD context file <ld-context>`.  
+* Expansions of json keys and identifier prefixes in the data above will be provided in a :ref:`JSON-LD context file <ld-context>`.  
 * Attributes preceded by an underscore (e.g. ``"_expertise"``) represent extensions to the core CAM model that CIViC might create to capture application-specific content in their system.'
 * Additional data examples will be provided as part of the :ref:`Implementation Guide <implementation-guide>`.
 

@@ -131,7 +131,7 @@ Contribution
 
 * **Capturing Multiple Contribution Roles**: 
 
-    * A contribution MUST connect a single Agent to a single Artifact. But a single Contribution object MAY capture multiple roles played by the agent in generating the artifact - simply by including more than one CRO contribution role in the *realizedRole* slot. This pattern provides a more concise representation when data creators do not need to capture unique details about each realized role (i.e. how, when, and where each was performed). In cases where such details for each role are required, separate Contribution objects MUST be created for each role played. 
+    * A contribution MUST connect a single Agent to a single Artifact. But a single Contribution object MAY capture multiple roles played by the agent in generating the artifact - simply by including more than one CRO contribution role in the *realizedRole* slot. This pattern provides a more concise representation when data creators do not need to capture unique details about each realized role (i.e. how, when, and where each was performed). In cases where such details for each role are required, separate Contribution objects SHOULD be created for each role played. 
 	
 * **Direction of Contribution Relationships**:
   

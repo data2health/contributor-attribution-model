@@ -68,9 +68,17 @@ Agent
 
     * Agent is an **‘abstract class’**, and therefore SHOULD NOT be directly instantiated. A concrete subclass (:ref:`Person <person>`, :ref:`Organization <organization>`, or :ref:`Computational Agent <computational-agent>`) SHOULD be selected to represent any agent in the data. The attributes defined for the abstract Agent class are inherited and extended by its child classes. 
 
+
+* **Agent Identity Criteria**:
+
+    * Agent instances in CAM are scoped to be independent of the context in which the agent operates. An instance of a Person agent represents _the person_, not the person _as they contribute to a particular project or organization_. So agent 'identity' is based only on who the person is, not additionally on the context in which they are acting.  This is different than how some models, including PROV, scope the notion of an Agent to represent a person acting in a particular context. We applied the former perspective on Agent identity, as we felt it to be more flexible, simpler to apply, and better facilitate data query and integration.
+    
+    * This decision has implications for how an Agent instances are created in the data. For example, consider a person 'Steven' who is a curator in different projects for the ClinGen and ENIGMA organizations. In a CAM-based dataset, there would be a _single Agent instance_ representing Steven, who may contribute to some curated artifacts as an agent for ClinGen and others as an agent for ENIGMA.  The context of these contributions is captured in the 'hadOrganizationalContext' field of the Contribution object. In a PROV dataset, there would be _two separate instances for Steven_ - one for representing his actions on behalf of ClinGen, and the other for representing his actions on behalf of ENIGMA. Here the context of contribution is part of the Agent object itself.  
+
+
 * **Extensions to the Agent Class**: 
 
-    * Implementations requiring more than the minimal attributes provided for describing agents MAY extend the model as needed, following the recommendations in the :ref:`Implementation Guide <implementation-guide>`. Extesnion may involve creating additional attributes for exsiting classes, and/or defineing additional subtypes. We recommend use of community  standards where possible for describing agents (e.g. `FOAF <http://www.foaf-project.org/>`_), to facilitate data sharing and interoperability.  
+    * Implementations requiring more than the minimal attributes provided for describing agents MAY extend the model as needed, following the recommendations in the :ref:`Implementation Guide <implementation-guide>`. Extesnion may involve creating additional attributes for exsiting classes, and/or defineing additional subtypes. We recommend use of community  standards where possible for describing agents (e.g. `FOAF <http://www.foaf-project.org/>`_), to enable data sharing and interoperability.  
 
 
 
